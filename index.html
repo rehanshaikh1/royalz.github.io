@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Royalz</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+    @font-face {
+        font-family: Agrandir-Regular;
+        src: url(assets/fonts/agrandir/Agrandir-Regular.otf);
+    }
+
+    @font-face {
+        font-family: black-mango-bold;
+        src: url(assets/fonts/black-mango/OTF/BlackMango-Bold.otf);
+    }
+
+    a {
+        font-family: "Crimson Pro", serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "black-mango-bold", serif;
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .home-section {
+        height: 100vh;
+        width: 100%;
+        background: url(assets/img/uri_ifs___M_eiIv6azeqVLRjSEBDxq_tSR51MLhZpbaDIIPdjeKh0o.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #navbarNav ul li a {
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #333;
+        border-radius: 4px;
+
+    }
+
+    .line-nav {
+        height: 5px !important;
+        width: 100%;
+        color: #fff;
+        opacity: 1 !important;
+    }
+
+    #inquire-section {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #about-section {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    #about-section .text-info p {
+        font-family: "Crimson Pro", serif;
+    }
+
+    .video-section {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .video-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .video-section video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .video-section .content {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(10%, -50%);
+        color: white;
+        /* text-align: center; */
+        padding: 30px 50px;
+        border-radius: 10px;
+    }
+
+    .video-section .btn-custom {
+        background: #fff;
+        color: #013927;
+        border-radius: 5px;
+        padding: 10px 40px;
+        font-size: 1.3rem;
+        margin-right: 10px;
+        text-transform: uppercase;
+    }
+
+    .video-section .btn-custom:hover {
+        background: #1c2538;
+    }
+
+    .video-section .social-icons a {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: 0.3s;
+    }
+
+    .video-section .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    #events-section {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #events-section .box {
+        position: relative;
+        text-align: center;
+    }
+
+    #events-section .box .innerboxtext {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        background-color: #ffd700;
+        color: #333;
+        padding: 30px 0;
+        font-family: "Crimson Pro", serif;
+    }
+    
+    #cater-section {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #eat-smoke-section {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #dinner-menu-section {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #dinner-menu-section .menu * {
+        font-family: "Cardo", serif !important;
+    }
+    @media (max-width: 991px) { /* Adjust breakpoint as needed */
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+    .navbar-nav{
+        width: 50% !important;
+    }
+    .home-section .royalz_text{
+        float: right;
+        margin-right: 0 !important;
+    }
+    #events-section .box{
+        margin: 20px 0;
+    }
+    #events-section .box img{
+        object-fit: cover;
+    }
+    #events-section{
+        height: 100%;
+    }
+    #cater-section{
+        height: 100%;
+    }
+    #cater-section .box .text{
+        margin: 30px 0 !important;
+    }
+    #about-section .col-lg-3 {
+        text-align: center;
+    }
+}
+@media (max-width: 575px) { /* Adjust breakpoint as needed */
+    
+    .home-section .container-fluid{
+        padding-top: 0 !important;
+    }
+    .home-section .royalz_text img{
+        width: 190px;
+    }
+    .royalz_text{
+        margin-top: -10px !important;
+    }
+    .video-section .content{
+        left: -20% !important;
+    }
+    .video-section .social-icons a{
+        margin-left: 0 !important;
+    }
+}
+#dinner-menu-section .category h3{
+    font-weight: 300 !important;
+    font-size: 21px;
+}
+#dinner-menu-section  h2{
+    font-size: 25px;
+}
+</style>
+
+<body>
+    <section class="home-section">
+        <div class="container-fluid pt-5">
+            <nav class="navbar navbar-expand-lg bg-transparent">
+                <div class="container-fluid">
+                    <div class=" navbar-collapse justify-content-around" id="navbarNav">
+                        <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#">Event</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#">Reserve</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#">Follow</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="container">
+                <hr class="line-nav px-5" />
+            </div>
+            <div class="div container ">
+                <div class="div royalz_text float-end text-center me-5 mt-3">
+                    <img src="https://media-public.canva.com/rrXOQ/MAFvb6rrXOQ/1/s.svg" width="250px" class=" ms-auto" alt="">
+                    <h1 class="text-warning" style="margin-top: -23px;">Royalz</h1>
+                    <p class="mb-0 text-white text-uppercase small" style="letter-spacing: 4px;">Restaurant
+                    </p>
+                    <p class="text-white text-uppercase small" style="letter-spacing: 4px;">& Lounge</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="inquire-section" class="py-5">
+        <div class="container p-5">
+            <h1 class="display-1 text-warning" style="letter-spacing: 5px;">Book your next party or event with us</h1>
+            <div class="row mt-5">
+                <div class="col-12 pb-4">
+                    <p class="fw-bold mb-0 text-white">Inquire Today</p>
+
+                </div>
+                <div class="col-lg-4 col-12">
+                    <p class="text-white fw-lighter">At Royalz Atlanta, we don’t just host events—we create royal experiences. Whether you're planning an elegant soirée, a milestone celebration, a corporate gathering, or a vibrant night out, our venue provides the perfect setting for unforgettable moments.</p>
+                    <button class="btn btn-light px-5 py-2 mt-4">Inquire Today</button>
+                </div>
+                <div class="col-lg-4 col-12 mt-lg-0 mt-5">
+
+                    <p class="text-white fw-lighter">Our space is designed to accommodate a variety of events, from intimate gatherings to grand celebrations. With luxurious interiors, dynamic lighting, and an energetic ambiance, we set the stage for an elevated experience tailored to your vision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-section" class="pb-5 pt-5">
+        <div class="container py-5  px-5">
+            <div class="row mb-5">
+                <div class="col-lg-9 col-12">
+                    <h1 class="display-1 text-warning mb-5" style="letter-spacing: 5px;">ABOUT US</h1>
+
+                    <div class="text-info text-white text-uppercase fw-lighter" style="line-height: 1.6;">
+                        <p>Royalz Atlanta was born from a shared dream between three lifelong friends—Daniel, Bashaar, and Helmi—who wanted to create a space where unforgettable memories are made. Inspired by their love for bringing people together, they envisioned a place that felt like home by day and a celebration by night—a perfect blend of warmth, energy, and indulgence.</p>
+                        <p>ringing together their diverse backgrounds and experiences, they’ve crafted an atmosphere where elegance meets excitement. Every detail, from the carefully selected décor to the curated flavors, is designed to transport you to a world where the past and present intertwine effortlessly.
+                            A Royal Experience Like No Other</p>
+                        <p>Drawing from the grandeur of the Mughal Empire and the intricate beauty of Arab influences, Royalz Atlanta is a feast for the senses. The floors, the walls, and every ornate detail have been hand-selected by the three founders, ensuring that every guest who steps inside is wrapped in an ambiance of luxury, culture, and celebration.</p>
+                        <p>By night, the space transforms into a vibrant party scene, where music, energy, and community come together. Whether you’re here for an intimate dinner, a lively night out, or a special event, we invite you to share a moment with us—because at Royalz Atlanta, you’re not just a guest, you’re part of our story.
+                            Welcome to Royalz Atlanta, where every night is legendary.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                <img src="https://media-public.canva.com/rrXOQ/MAFvb6rrXOQ/1/s.svg" style="width: 300px;" alt="" alt="">
+                <img src="assets/img/Untitled.svg" style="width: 350px; margin-top: 60px; transform: rotate(-55deg);" alt="">
+               </div>
+            </div>
+        </div>
+    </section>
+    <section class="video-section">
+        <video autoplay loop muted playsinline>
+            <source src="https://video-private-assets.canva.com/VAGAa4oQ0_4/v/6916ed3626.mp4?exp=1740134520000&cf-ck=hwe7eIDFcHgz4ZZ2XlvpePCmHS3t2QkubfChSj8gM5o&cf-sig=J8fp79-m7fpskb6bmRyJ03FhYnLLFWdaTEhBDYpk8l0&cf-sig-kid=CO7cCjZ_YiI=&sig=Q29lL_C7Nv9Oy18tiplEM5_NML1aXde06xFaqCnNID4&sig-kid=GzFgFdhXD-Q=" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h1 class="mb-3 display-3 text-warning">Book a Table</h1>
+            <h5 class="mb-2 text-warning" style="letter-spacing: 5px;">"Dine Like Royalty</h5>
+            <h5 class="mb-3 text-warning" style="letter-spacing: 5px;">Party Like Legends."</h5>
+
+            <div class="d-flex mt-5">
+                <a href="#" class="btn btn-custom">Reserve</a>
+
+                <div class="social-icons d-flex ms-3 mt-2">
+                    <a href="#" class="mx-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class=" mx-4"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mx-4"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="events-section" class="">
+        <div class="container p-5">
+            <div class="content">
+                <div class="heading text-center">
+                    <h1 class="display-2 text-warning">EVENTS</h1>
+                    <div class="container">
+                        <div class="row mt-5">
+                            <div class="col-lg-4">
+                                <div class="box">
+                                    <img src="https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2F410dcb23-91f7-4ab7-b6f7-6dc292a17c8e/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAETKTn9uoCJN7lklDCp68qcDXyx6goyoiXXrJ16LE7Bs&exp=1740149836&osig=AAAAAAAAAAAAAAAAAAAAAHPtnAUR5pbQRICV_2KqjRNwB1X4SeT21yxncf9x8v_m&signer=media-rpc&x-canva-quality=screen" style="width: 100%; height: 400px;" alt="">
+                                    <span class="innerboxtext">Soft Opening</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="box">
+                                    <img src="https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2Ffc008899-3571-43f4-9109-9e02249a085a/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAANzCF2GtOQogacXfomaTJYwP7UAdRh6PLsj7edSqYhYb&exp=1740148605&osig=AAAAAAAAAAAAAAAAAAAAAMb68U-w4tMLRsLy9ms0pVJFewYQEb1GlmS7o5fjPsgO&signer=media-rpc&x-canva-quality=screen" style="width: 100%; height: 400px;" alt="">
+                                    <span class="innerboxtext">Weekly DJ</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="box">
+                                    <img src="https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2F26cf695c-02f6-493a-bd4c-e1fa47def264/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAGEmTl0_zT_DdB0GnKP_enDyzIsWxtnwlxU6IWNwVTD1&exp=1740149235&osig=AAAAAAAAAAAAAAAAAAAAABxSb_qf938FQCF6a6dSSNpCerpDkompVscMQanXSnjO&signer=media-rpc&x-canva-quality=screen" style="width: 100%; height: 400px;" alt="">
+                                    <span class="innerboxtext">Weekly Dinner Specials</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2F410dcb23-91f7-4ab7-b6f7-6dc292a17c8e/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAETKTn9uoCJN7lklDCp68qcDXyx6goyoiXXrJ16LE7Bs&exp=1740149836&osig=AAAAAAAAAAAAAAAAAAAAAHPtnAUR5pbQRICV_2KqjRNwB1X4SeT21yxncf9x8v_m&signer=media-rpc&x-canva-quality=screen
+                    https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2Ffc008899-3571-43f4-9109-9e02249a085a/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAANzCF2GtOQogacXfomaTJYwP7UAdRh6PLsj7edSqYhYb&exp=1740148605&osig=AAAAAAAAAAAAAAAAAAAAAMb68U-w4tMLRsLy9ms0pVJFewYQEb1GlmS7o5fjPsgO&signer=media-rpc&x-canva-quality=screen     
+                    https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2F26cf695c-02f6-493a-bd4c-e1fa47def264/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAGEmTl0_zT_DdB0GnKP_enDyzIsWxtnwlxU6IWNwVTD1&exp=1740149235&osig=AAAAAAAAAAAAAAAAAAAAABxSb_qf938FQCF6a6dSSNpCerpDkompVscMQanXSnjO&signer=media-rpc&x-canva-quality=screen -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cater-section" class="">
+        <div class="container p-5">
+            <div class="content">
+                <div class="heading text-center">
+                    <h1 class="display-2 text-warning">CATERS</h1>
+                    <div class="container">
+                        <div class="row mt-5">
+                            <div class="col-lg-4 px-5">
+                                <div class="box">
+                                    <div class="img"><img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FJudEyWLuxZghndH8M2UjPuCoSesB1UmDxGbScTCxrcU.jpg?csig=AAAAAAAAAAAAAAAAAAAAAAq3N9NdxhKlx-2taa5GSmtX3h5-6D2-ZusVcKen33VY&exp=1740150073&signer=media-rpc&token=AAIAAU0AL0p1ZEV5V0x1eFpnaG5kSDhNMlVqUHVDb1Nlc0IxVW1EeEdiU2NUQ3hyY1UuanBnAAAAAAGVKQbmqH7ig6LrTxLQpbco4DK61oRB6RQhTEd8huchC_s2i_Am" alt="" class="img-fluid"></div>
+                                    <div class="text text-white mt-3">
+                                        <p class="fw-bold">
+                                            A Culinary Experience Like No Other
+                                        </p>
+                                        <p class="fw-light">Our catering menu is designed to elevate your event, blending bold flavors, rich traditions, and modern creativity. From delectable appetizers to exquisite main courses and handcrafted desserts, every dish is crafted with the same passion and precision that defines our restaurant.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 px-5">
+                                <div class="box">
+                                    <div class="img"><img src="https://media-public.canva.com/iQT70/MAEg2kiQT70/1/s.jpg" alt="" class="img-fluid"></div>
+                                    <div class="text text-white mt-3">
+                                        <p class="fw-bold">
+                                            Customizable Menus
+                                        </p>
+                                        <p class="fw-light">We offer custom catering packages tailored to your needs. Whether you prefer a buffet-style feast, plated dinners, or elegant hors d’oeuvres, our team will work with you to create a menu that perfectly complements your event.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 px-5">
+                                <div class="box">
+                                    <div class="img"><img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2Fa-vllVTNmlCCSNdkrTMCcMmWxDeuSQHEykKf9CxcU8c.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMPuMZ_zO-Hs-LUpo59T-iJa1Vqkb7fRL4_T7WTnQsLp&exp=1740151322&signer=media-rpc&token=AAIAAU0AL2EtdmxsVlRObWxDQ1NOZGtyVE1DY01tV3hEZXVTUUhFeWtLZjlDeGNVOGMuanBnAAAAAAGVKRn1kC2SKwJ8J1op6ZvYDRFIxA9ufoWUAebrf5gZeW6usoTQ" alt="" class="img-fluid"></div>
+                                    <div class="text text-white mt-3">
+                                        <p class="fw-bold">
+                                            Seamless Service
+                                        </p>
+                                        <p class="fw-light">Our catering team ensures a smooth and seamless experience, handling everything from menu planning and food presentation to setup and service—so you can focus on enjoying your event.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- https://media-public.canva.com/rrXOQ/MAFvb6rrXOQ/1/s.svg -->
+                    <!-- https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2F410dcb23-91f7-4ab7-b6f7-6dc292a17c8e/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAETKTn9uoCJN7lklDCp68qcDXyx6goyoiXXrJ16LE7Bs&exp=1740149836&osig=AAAAAAAAAAAAAAAAAAAAAHPtnAUR5pbQRICV_2KqjRNwB1X4SeT21yxncf9x8v_m&signer=media-rpc&x-canva-quality=screen
+                    https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2Ffc008899-3571-43f4-9109-9e02249a085a/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAANzCF2GtOQogacXfomaTJYwP7UAdRh6PLsj7edSqYhYb&exp=1740148605&osig=AAAAAAAAAAAAAAAAAAAAAMb68U-w4tMLRsLy9ms0pVJFewYQEb1GlmS7o5fjPsgO&signer=media-rpc&x-canva-quality=screen     
+                    https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:ifs%3A%2F%2F%2F26cf695c-02f6-493a-bd4c-e1fa47def264/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAGEmTl0_zT_DdB0GnKP_enDyzIsWxtnwlxU6IWNwVTD1&exp=1740149235&osig=AAAAAAAAAAAAAAAAAAAAABxSb_qf938FQCF6a6dSSNpCerpDkompVscMQanXSnjO&signer=media-rpc&x-canva-quality=screen -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="eat-smoke-section" class="py-5">
+        <div class="container p-5">
+            <div class="main-img text-center">
+                <img src="https://media-public.canva.com/rrXOQ/MAFvb6rrXOQ/1/s.svg" width="400px" alt="">
+            </div>
+            <div class="row mt-md-5 mt-0">
+                <div class="col-md-4 col-12 text-center">
+                    <h1 class="text-warning display-3">EAT</h1>
+                </div>
+                <div class="col-md-4 col-12 text-center py-md-0 py-5">
+                    <h1 class="text-warning display-3">SMOKE</h1>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <h1 class="text-warning display-3">DRINK</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="dinner-menu-section" class="py-5">
+        <div class="container ">
+            <div class="heading">
+                <h1 class="display-3 text-warning">
+                    Dinner Menu
+                </h1>
+            </div>
+            <div class="menu text-uppercase">
+                <div class="row mt-5">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Appetizers</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Hummus: </h3>
+                            <h3 class="text-white fw-light">
+                                Blended garbanzo beans, tahini,lemonjuice and spices topped with olive oil
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Falafel: </h3>
+                            <h3 class="text-white fw-light">
+                                Patties of ground garbanzo beans and spices, deep fried with a side of tahini sauce
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Baba Ganoush : </h3>
+                            <h3 class="text-white fw-light">
+                                Roasted eggplant, mashed garlic, spices topped with olive oil
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Grape Leaves : </h3>
+                            <h3 class="text-white fw-light">
+                                Grape leaves stuffed with rice and spices
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Entrees</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Chicken Shawarma: </h3>
+                            <h3 class="text-white fw-light">
+                                Slices of marinated chicken with spices, broiled and served on a platter
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Beef Shawarma: </h3>
+                            <h3 class="text-white fw-light">
+                                Slices of marinated beef with spices, broiled and served on a platter
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Lamb Kabob : </h3>
+                            <h3 class="text-white fw-light">
+                                skewers of spiced lamb, grilled to perfection
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Beef Kabob : </h3>
+                            <h3 class="text-white fw-light">
+                                Filet mignon, spiced, skewered and grilled to perfection
+                            </h3>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="dinner-menu-section" class="py-5">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row ">
+                    <div class="col-md-6 col-12">
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Hummus with Shawarma: </h3>
+                            <h3 class="text-white fw-light">
+                                topped with parsley and pan-fried almonds
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Tzakiki: </h3>
+                            <h3 class="text-white fw-light">
+                                Greek sauce made from yogurt, cucumber, garlic, olive oil, lemon juice and various herbs
+                            </h3>
+                        </div>
+                        <h2 class=" " style="background-color: #efeae7;">Soups & Salads</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-light">
+                                Lentil Soup
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Grape Leaves : </h3>
+                            <h3 class="text-white fw-light">Cucumber, green peppers, tomatos, kalamata olives, topped with feta cheese with Greek vinaigrette</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Ceasar Salad </h3>
+                            <h3 class="text-white fw-light">with kubz and hummus</h3>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Salmon Kabob</h3>
+                            <h3 class="text-white fw-light">Grilled Atlantic salmon served with rice and vegetables</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kofta Kabob</h3>
+                            <h3 class="text-white fw-light">Grilled mix of lamb and beef Kababs served with rice and grilled vegetables</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Gyro Plate</h3>
+                            <h3 class="text-white fw-light">Seasoned grilled lamb with salad</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Wings Combo </h3>
+                            <h3 class="text-white fw-light">Choice of flavors: plain, mild or spicy. Served with fries and ranch sauce</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="dinner-menu-section" class="py-5">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row ">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Wraps (Served with Fries)</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Flalfel Pita</h3>
+                            <h3 class="text-white fw-light">
+                                Served with salad, pickles, lettuce and tahini sauce
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Shish Tawook Sandwich: </h3>
+                            <h3 class="text-white fw-light">
+                                Garlic sauce, tomatos, lettuce and pickles
+                            </h3>
+                        </div>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">
+                                Arabic Shawarma (Beef or chicken)
+                            </h3>
+                            <h3 class="text-white fw-light">
+                                Garlic sauce, pickles served with fries
+
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kofta Wrap </h3>
+                            <h3 class="text-white fw-light">Grilled mix of lamb and beef served with TOMATOES, onions, fresh parsley,sumac and tahini sauce</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Gyro Wrap </h3>
+                            <h3 class="text-white fw-light">Lamb wrapped in pita with salad, paired with taziki sauce</h3>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Cold Beverages</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Soda</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Red Bull </h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Laziza </h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Perrier Mineral Water </h3>
+
+                        </div>
+                        <h2 class=" " style="background-color: #efeae7;">Hot Beverages</h2>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Tea </h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Coffee </h3>
+
+                        </div>
+                        <h2 class=" " style="background-color: #efeae7;">Juices</h2>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Royalz Mixed Drink </h3>
+                            <h3 class="text-white fw-light">Lemon Mint juice </h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Orange Juice </h3>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="dinner-menu-section" class="py-5">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row ">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Desserts</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kunafe</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Baklava with Ice Cream </h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Chocolate Cake </h3>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-12">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="dinner-menu-section" class="py-5">
+        <div class="container ">
+            <div class="heading">
+                <h1 class="display-3 text-warning">
+                    Hookah Menu
+                </h1>
+            </div>
+            <div class="menu text-uppercase">
+                <div class="row mt-5">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Flavors (Al Faker)</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold my-0">Mint</h3>  
+                            <h3 class="text-white fw-bold my-0">Orange</h3>  
+                            <h3 class="text-white fw-bold my-0">Blueberry</h3>  
+                            <h3 class="text-white fw-bold my-0">Watermelon</h3>  
+                            <h3 class="text-white fw-bold my-0">Strawberry</h3>  
+                            <h3 class="text-white fw-bold my-0">Peach</h3>  
+                            <h3 class="text-white fw-bold my-0">Lemon</h3>  
+                            <h3 class="text-white fw-bold my-0">Mango</h3>  
+                            <h3 class="text-white fw-bold my-0">Pineapple</h3>  
+                            <h3 class="text-white fw-bold my-0">Double Apple</h3>  
+                            <h3 class="text-white fw-bold my-0">Grape</h3>  
+                            <h3 class="text-white fw-bold my-0">Vanilla</h3>  
+                            <h3 class="text-white fw-bold my-0">Banana</h3>  
+                            <h3 class="text-white fw-bold my-0">Gum</h3>  
+                            <h3 class="text-white fw-bold my-0">Guava</h3>  
+                            <h3 class="text-white fw-bold my-0">Kiwi</h3>  
+                            <h3 class="text-white fw-bold my-0">Ice Cream</h3>
+
+                        </div>
+                        
+
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Flavors (Adalya)</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold my-0">Istanbul Night</h3>  
+                            <h3 class="text-white fw-bold my-0">Ice Lemon Mint</h3>  
+                            <h3 class="text-white fw-bold my-0">Love 66</h3>  
+                            <h3 class="text-white fw-bold my-0">Lady & Sky Fall</h3>    
+
+                        </div>
+
+                        <h2 class=" " style="background-color: #efeae7;">Flavors (Starbuzz)</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold my-0">Blue Mist </h3>  
+                            <h3 class="text-white fw-bold my-0">Mighty Freeze </h3>  
+                            <h3 class="text-white fw-bold my-0">Queen of Sex </h3>  
+                            <h3 class="text-white fw-bold my-0">Sex on the Beach </h3>    
+                            <h3 class="text-white fw-bold my-0">Code 69</h3>    
+
+                        </div>
+
+                        
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
+<!-- <img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FJudEyWLuxZghndH8M2UjPuCoSesB1UmDxGbScTCxrcU.jpg?csig=AAAAAAAAAAAAAAAAAAAAAAq3N9NdxhKlx-2taa5GSmtX3h5-6D2-ZusVcKen33VY&exp=1740150073&signer=media-rpc&token=AAIAAU0AL0p1ZEV5V0x1eFpnaG5kSDhNMlVqUHVDb1Nlc0IxVW1EeEdiU2NUQ3hyY1UuanBnAAAAAAGVKQbmqH7ig6LrTxLQpbco4DK61oRB6RQhTEd8huchC_s2i_Am" alt="">
+                    <img src="https://media-public.canva.com/iQT70/MAEg2kiQT70/1/s.jpg" alt="">
+                    <img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2Fa-vllVTNmlCCSNdkrTMCcMmWxDeuSQHEykKf9CxcU8c.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMPuMZ_zO-Hs-LUpo59T-iJa1Vqkb7fRL4_T7WTnQsLp&exp=1740151322&signer=media-rpc&token=AAIAAU0AL2EtdmxsVlRObWxDQ1NOZGtyVE1DY01tV3hEZXVTUUhFeWtLZjlDeGNVOGMuanBnAAAAAAGVKRn1kC2SKwJ8J1op6ZvYDRFIxA9ufoWUAebrf5gZeW6usoTQ" alt=""> -->
