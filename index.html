@@ -191,7 +191,7 @@ background-repeat: no-repeat;
         background-size: cover;
     }
 
-    #eat-smoke-section {
+    .eat-smoke-section {
         height: 100vh;
         width: 100%;
         background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
@@ -280,7 +280,7 @@ background-repeat: no-repeat;
     .main-img img{
         width: 300px;
     }
-    #eat-smoke-section{
+    .eat-smoke-section{
         height: 100vh;
     }
     .dinner-menu-section  {
@@ -300,12 +300,25 @@ background-repeat: no-repeat;
 <body>
     <section class="home-section" id="home-section">
         <div class="container-fluid pt-5">
-            <nav class="navbar navbar-expand-lg bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-transparent d-none d-sm-block">
                 <div class="container-fluid">
                     <div class=" navbar-collapse justify-content-around" id="navbarNav">
                         <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
                             <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#home-section">Home</a></li>
                             <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#eat-smoke-section">Menu</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#events-section">Events</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#reserve-section">Reserve</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#inquire-section">Follow</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg bg-transparent d-block d-sm-none">
+                <div class="container-fluid">
+                    <div class=" navbar-collapse justify-content-around" id="navbarNav">
+                        <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#home-section">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#eat-smoke-section1">Menu</a></li>
                             <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#events-section">Events</a></li>
                             <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#reserve-section">Reserve</a></li>
                             <li class="nav-item"><a class="nav-link text-uppercase bg-white px-5" href="#inquire-section">Follow</a></li>
@@ -427,7 +440,7 @@ background-repeat: no-repeat;
         </div>
     </section>
    
-    <section id="eat-smoke-section" class="d-none d-sm-block">
+    <section id="eat-smoke-section" class="d-none d-sm-block eat-smoke-section">
         <div class="container px-5">
             <div class="main-img text-center">
                 <img src="assets/img/tiger.svg" width="400px" alt="">
@@ -445,7 +458,7 @@ background-repeat: no-repeat;
             </div>
         </div>
     </section>
-    <section id="eat-smoke-section" class="d-block d-sm-none">
+    <section id="eat-smoke-section1" class="d-block d-sm-none eat-smoke-section">
         <div class="container px-5">
             <div class="main-img text-center">
                 <img src="assets/img/tiger.svg" width="400px" alt="">
