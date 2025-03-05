@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+
+    <title>Royalz Restaurant
+
+        & Lounge</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+    @font-face {
+        font-family: Agrandir-Regular;
+        src: url(assets/fonts/agrandir/Agrandir-Regular.otf);
+    }
+
+    @font-face {
+        font-family: black-mango-bold;
+        src: url(assets/fonts/black-mango/OTF/BlackMango-Bold.otf);
+    }
+
+    a {
+        font-family: "Crimson Pro", serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "black-mango-bold", serif;
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .home-section {
+        height: 100vh;
+        width: 100%;
+        background: url(assets/img/uri_ifs___M_eiIv6azeqVLRjSEBDxq_tSR51MLhZpbaDIIPdjeKh0o.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #navbarNav ul li a {
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: #333;
+        border-radius: 4px;
+
+    }
+
+    .line-nav {
+        height: 5px !important;
+        width: 100%;
+        color: #fff;
+        opacity: 1 !important;
+    }
+
+    #inquire-section {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #about-section {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    #about-section .text-info p {
+        font-family: "Crimson Pro", serif;
+    }
+
+    .video-section {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .video-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .video-section video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .video-section .content {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(10%, -50%);
+        color: white;
+        /* text-align: center; */
+        padding: 30px 50px;
+        border-radius: 10px;
+    }
+
+    .video-section .btn-custom {
+        background: #fff;
+        color: #013927;
+        border-radius: 5px;
+        padding: 10px 40px;
+        font-size: 1.3rem;
+        margin-right: 10px;
+        text-transform: uppercase;
+    }
+
+    .video-section .btn-custom:hover {
+        background: #1c2538;
+        color: #fff !important;
+    }
+
+    .video-section .social-icons a {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: 0.3s;
+    }
+
+    .video-section .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    #events-section {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #events-section .box {
+        position: relative;
+        text-align: center;
+    }
+
+    #events-section .box .innerboxtext {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        background-color: #ffd700;
+        color: #333;
+        padding: 30px 0;
+        font-family: "Crimson Pro", serif;
+    }
+    
+    #cater-section {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .eat-smoke-section {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .dinner-menu-section {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .dinner-menu-section.lion-face {
+        padding-top: 100px !important;
+        background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)),
+            url(assets/img/99fd1c1274.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 100%;
+
+    }
+
+    .dinner-menu-section .menu * {
+        font-family: "Cardo", serif !important;
+    }
+    @media (max-width: 991px) { 
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+    .navbar-nav{
+        width: 50% !important;
+    }
+    .home-section .royalz_text{
+        float: right;
+        margin-right: 0 !important;
+    }
+    #events-section .box{
+        margin: 20px 0;
+    }
+    #events-section .box img{
+        object-fit: cover;
+    }
+    #events-section{
+        height: 100%;
+    }
+    #cater-section{
+        height: 100%;
+    }
+    #cater-section .box .text{
+        margin: 30px 0 !important;
+    }
+    #about-section .col-lg-3 {
+        text-align: center;
+    }
+}
+@media (max-width: 575px) { /* Adjust breakpoint as needed */
+    #about-section{
+        padding-top: 0 !important;
+    }
+    #inquire-section{
+        padding-bottom: 0 !important;
+    }
+    .home-section .container-fluid{
+        padding-top: 0 !important;
+    }
+    .home-section .royalz_text img{
+        width: 190px;
+    }
+    .royalz_text{
+        margin-top: -10px !important;
+    }
+    .video-section .content{
+        left: -17% !important;
+    }
+    .video-section .social-icons a{
+        margin-left: 0 !important;
+    }
+    .main-img img{
+        width: 300px;
+    }
+    .eat-smoke-section{
+        height: 100vh;
+    }
+    .dinner-menu-section  {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+}
+.dinner-menu-section .category h3{
+    font-weight: 300 !important;
+    font-size: 21px;
+}
+.dinner-menu-section  h2{
+    font-size: 25px;
+}
+</style>
+
+<body>
+    
+<div class="d-none d-md-block">
+    <section id="eat-menu" class="dinner-menu-section">
+        <div class="container ">
+            <div class="heading">
+                <h1 class="display-3 text-warning">
+                    Dinner Menu
+                </h1>
+            </div>
+            <div class="menu text-uppercase">
+                <div class="row mt-5">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Appetizers</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Hummus - $9</h3>
+                            <h3 class="text-white fw-light">
+                                Blended garbanzo beans, tahini,lemonjuice and spices topped with olive oil
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Falafel - $9</h3>
+                            <h3 class="text-white fw-light">
+                                Patties of ground garbanzo beans and spices, deep fried with a side of tahini sauce
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Baba Ganoush - $9</h3>
+                            <h3 class="text-white fw-light">
+                                Roasted eggplant, mashed garlic, spices topped with olive oil
+                            </h3>
+                        </div>
+                        <div class="category py-3">                             <h3 class="text-white fw-bold">Hummus with Shawarma - $15</h3>                             <h3 class="text-white fw-light">                                 topped with parsley and pan-fried almonds                             </h3>                         </div>                         <div class="category py-3">                             <h3 class="text-white fw-bold">Tzakiki - $8</h3>                             <h3 class="text-white fw-light">                                 Greek sauce made from yogurt, cucumber, garlic, olive oil, lemon juice and various herbs                             </h3>                         </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Grape Salad - $12</h3>
+                            <h3 class="text-white fw-light">
+                                Grape Salad stuffed with rice and spices
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">fattoush - $12</h3>
+                            <h3 class="text-white fw-light">
+                                Crunchy and flavorful vegan chopped salad
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">mezze platter - $24</h3>
+                            <h3 class="text-white fw-light">
+                                Includes hummus, baba ganoush, tabouleh, taziki sause, falafel, and of grape leaves. 
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Wings Combo - $18</h3>
+                            <h3 class="text-white fw-light">Choice of flavors: plain, mild or spicy. Served with fries and ranch sauce</h3>
+
+                        </div>
+                      
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Entrees (includes rice, bulghur, and salad)</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Chicken Shawarma - $18</h3>
+                            <h3 class="text-white fw-light">
+                                Slices of marinated chicken with spices, broiled and served on a platter
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Beef Shawarma - $18</h3>
+                            <h3 class="text-white fw-light">
+                                Slices of marinated beef with spices, broiled and served on a platter
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Lamb Kebab - $24</h3>
+                            <h3 class="text-white fw-light">
+                                skewers of spiced lamb, grilled to perfection
+                            </h3>
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Falafel dinner - $16</h3>
+                            <h3 class="text-white fw-light">
+                               A vegetarian favorite, the Falafel Platter features crispy, golden-brown falafel made from ground chickpeas, herbs, and spices. 
+                            </h3>
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Chicken Shish Tawook Sandwich - $18</h3>
+                            <h3 class="text-white fw-light">
+                               Chicken Shish Tawook consists of tender, marinated chicken skewers grilled to perfection. The chicken is infused with a flavorful blend of yogurt, garlic, lemon juice, and warm spices, creating a juicy and aromatic dish. 
+
+
+
+                            </h3>
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Salmon Kebab - $28</h3>
+                            <h3 class="text-white fw-light">Grilled Atlantic salmon served with rice and vegetables</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kofta Kebab - $19</h3>
+                            <h3 class="text-white fw-light">Grilled mix of lamb and beef Kababs served with rice and grilled vegetables</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Gyro Plate - $18</h3>
+                            <h3 class="text-white fw-light">Seasoned grilled lamb with salad</h3>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-5 dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row mt-4">
+                    <div class="col-md-6 col-12">
+
+                        
+                        <h2 class=" " style="background-color: #efeae7;">Soups & Salads</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-light">
+                                Lentil Soup - $6
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Grape Leaves - $4</h3>
+                            <h3 class="text-white fw-light">Cucumber, green peppers, tomatos, kalamata olives, topped with feta cheese with Greek vinaigrette</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Gaden Salad - $12</h3>
+                            <h3 class="text-white fw-light">Mixed greens with vinaigrette dressing  </h3>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-12">
+                       
+                        <h2 class=" " style="background-color: #efeae7;">Sides</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">French Fries - $5</h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Greek Fries - $5</h3>
+                        </div><div class="category py-3">
+                            <h3 class="text-white fw-bold">Basmati Rice - $6</h3>
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="drink-menu" class="py-5 dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row ">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Wraps (Served with Fries)</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Flalfel Pita - $9</h3>
+                            <h3 class="text-white fw-light">
+                                Served with salad, pickles, lettuce and tahini sauce
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Shish Tawook Sandwich - $11</h3>
+                            <h3 class="text-white fw-light">
+                                Garlic sauce, tomatos, lettuce and pickles
+                            </h3>
+                        </div>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">
+                                Arabic Shawarma (Beef or chicken) - $14
+                            </h3>
+                            <h3 class="text-white fw-light">
+                                Garlic sauce, pickles served with fries
+
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kofta Wrap - $11<h3>
+                            <h3 class="text-white fw-light">Grilled mix of lamb and beef served with TOMATOES, onions, fresh parsley,sumac and tahini sauce</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Gyro Wrap - $11</h3>
+                            <h3 class="text-white fw-light">Lamb wrapped in pita with salad, paired with taziki sauce</h3>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Cold Beverages</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Soda - $3</h3>
+
+                        </div>
+                        
+                       
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Perrier Mineral Water - $4 </h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Fiji Water - $3</h3>
+
+                        </div>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Deer Park Water - $1</h3>
+
+                        </div>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Red Bull (Regular and Sugar Free): - $5</h3>
+
+                        </div>
+                       
+                        <h2 class="mt-sm-0 mt-5" style="background-color: #efeae7;">Hot Beverages</h2>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Tea - $10</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Coffee - $5</h3>
+
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Tea Glass - $2</h3>
+
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Turkish Coffee Pot - $5</h3>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-5 lion-face dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row ">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Desserts</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kunafe - $10</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Baklava with Ice Cream - $8</h3>
+
+                        </div>
+                       <div class="category py-3">
+                            <h3 class="text-white fw-bold">Fruit Platter - $18</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Cheesecake - $18</h3>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-12">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+                            </div>
+                                <div class="d-block d-md-none">
+<section id="eat-menu1" class="dinner-menu-section">
+        <div class="container ">
+            <div class="heading">
+                <h1 class="display-3 text-warning">
+                    Dinner Menu
+                </h1>
+            </div>
+            <div class="menu text-uppercase">
+                <div class="row mt-5">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Appetizers</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Hummus - $9</h3>
+                            <h3 class="text-white fw-light">
+                                Blended garbanzo beans, tahini, lemon juice and spices topped with olive oil
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Falafel - $9</h3>
+                            <h3 class="text-white fw-light">
+                                Patties of ground garbanzo beans and spices, deep fried with a side of tahini sauce
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Baba Ganoush - $9</h3>
+                            <h3 class="text-white fw-light">
+                                Roasted eggplant, mashed garlic, spices topped with olive oil
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Grape Leaves - $12</h3>
+                            <h3 class="text-white fw-light">
+                                Grape leaves stuffed with rice and spices
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Hummus with Shawarma - $15</h3>
+                            <h3 class="text-white fw-light">
+                                topped with parsley and pan-fried almonds
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Tzakiki - $8</h3>
+                            <h3 class="text-white fw-light">
+                                Greek sauce made from yogurt, cucumber, garlic, olive oil, lemon juice and various herbs
+                            </h3>
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">fattoush - $12</h3>
+                            <h3 class="text-white fw-light">
+                                Crunchy and flavorful vegan chopped salad
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">mezze platter - $24</h3>
+                            <h3 class="text-white fw-light">
+                                Includes hummus, baba ganoush, tabouleh, taziki sause, falafel, and of grape leaves. 
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Wings Combo - $18</h3>
+                            <h3 class="text-white fw-light">Choice of flavors: plain, mild or spicy. Served with fries and ranch sauce</h3>
+
+                        </div>
+
+                    </div>
+        
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-2 dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row mt-4">
+                    <div class="col-md-6 col-12">
+
+                        
+                        <h2 class=" " style="background-color: #efeae7;">Soups & Salads</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-light">
+                                Lentil Soup - $6
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Grape Leaves - $4</h3>
+                            <h3 class="text-white fw-light">Cucumber, green peppers, tomatos, kalamata olives, topped with feta cheese with Greek vinaigrette</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Gaden Salad - $12</h3>
+                            <h3 class="text-white fw-light">Mixed greens with vinaigrette dressing  </h3>
+
+                        </div>
+
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </section>
+               <section class="py-2 dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row mt-4">
+                    <div class="col-md-6 col-12">
+
+                        
+                        <h2 class=" " style="background-color: #efeae7;">Sides</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">French Fries - $5</h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Greek Fries - $5</h3>
+                        </div><div class="category py-3">
+                            <h3 class="text-white fw-bold">Basmati Rice - $6</h3>
+                        </div>
+
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </section>                      
+     <section class="py-2 dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row mt-4">
+                    <div class="col-md-6 col-12">
+
+                        
+                        <h2 class=" " style="background-color: #efeae7;">Wraps (Served with Fries)</h2>
+
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Falafel Pita - $9</h3>
+                            <h3 class="text-white fw-light">
+                                Served with salad, pickles, lettuce and tahini sauce
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Shish Tawook Sandwich - $11</h3>
+                            <h3 class="text-white fw-light">
+                                Garlic sauce, tomatos, lettuce and pickles
+                            </h3>
+                        </div>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">
+                                Arabic Shawarma (Beef or chicken) - $14
+                            </h3>
+                            <h3 class="text-white fw-light">
+                                Garlic sauce, pickles served with fries
+
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kofta Wrap - $11<h3>
+                            <h3 class="text-white fw-light">Grilled mix of lamb and beef served with TOMATOES, onions, fresh parsley, sumac and tahini sauce</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Gyro Wrap - $11</h3>
+                            <h3 class="text-white fw-light">Lamb wrapped in pita with salad, paired with taziki sauce</h3>
+
+                        </div>
+    
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-2 dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row mt-4">
+                    <div class="col-md-6 col-12">
+
+                        
+                        <h2 class=" " style="background-color: #efeae7;">Entrees (includes rice, bulghur, and salad)
+</h2>
+
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Chicken Shawarma - $18</h3>
+                            <h3 class="text-white fw-light">
+                                Slices of marinated chicken with spices, broiled and served on a platter
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Beef Shawarma - $18</h3>
+                            <h3 class="text-white fw-light">
+                                Slices of marinated beef with spices, broiled and served on a platter
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Lamb Kebab - $24</h3>
+                            <h3 class="text-white fw-light">
+                                skewers of spiced lamb, grilled to perfection
+                            </h3>
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Salmon Kebab - $28</h3>
+                            <h3 class="text-white fw-light">Grilled Atlantic salmon served with rice and vegetables</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kofta Kebab - $19</h3>
+                            <h3 class="text-white fw-light">Grilled mix of lamb and beef Kababs served with rice and grilled vegetables</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Gyro Plate - $18</h3>
+                            <h3 class="text-white fw-light">Seasoned grilled lamb with salad</h3>
+
+                        </div>
+                       
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Falafel dinner - $16</h3>
+                            <h3 class="text-white fw-light">
+                              A vegetarian favorite, the Falafel Platter features crispy, golden-brown falafel made from ground chickpeas, herbs, and spices. 
+                            </h3>
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Chicken Shish Tawook Sandwich - $18</h3>
+                            <h3 class="text-white fw-light">
+                             Chicken Shish Tawook consists of tender, marinated chicken skewers grilled to perfection. The chicken is infused with a flavorful blend of yogurt, garlic, lemon juice, and warm spices, creating a juicy and aromatic dish. 
+
+
+                            </h3>
+                        </div>
+
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="drink" class="py-2 dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row ">
+                   
+                    <div class="col-md-6 col-12">
+                         <h2 class=" " style="background-color: #efeae7;">Desserts</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Kunafe - $10</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Baklava with Ice Cream - $8</h3>
+
+                        </div>
+                       <div class="category py-3">
+                            <h3 class="text-white fw-bold">Fruit Platter - $18</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Cheesecake - $18</h3>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="drink1" class="pt-2 pb-5 dinner-menu-section">
+        <div class="container ">
+
+            <div class="menu text-uppercase">
+                <div class="row ">
+                   
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Cold Beverages</h2>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Soda - $3</h3>
+
+                        </div>
+                      
+                       
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Perrier Mineral Water - $4 </h3>
+
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Fiji Water - $3</h3>
+
+                        </div>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Deer Park Water - $1</h3>
+
+                        </div>
+
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Red Bull (Regular and Sugar Free): - $5</h3>
+
+                        </div>
+                        <h2 class="mt-5 mt-sm-0" style="background-color: #efeae7;">Hot Beverages</h2>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Tea - $10</h3>
+
+                        </div>
+                        <div class="category py-3">
+                            <h3 class="text-white fw-bold">Coffee - $5</h3>
+
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Tea Glass - $2</h3>
+
+                        </div>
+                         <div class="category py-3">
+                            <h3 class="text-white fw-bold">Turkish Coffee Pot - $5</h3>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+   </div>
+    <section id="hookah-menu" class="py-0 py-sm-5 mt-0  dinner-menu-section">
+        <div class="container ">
+            <div class="heading">
+                <h1 class="display-3 text-warning">
+                    Hookah Menu
+
+                </h1>
+                                                                <h3 class="text-white fw-bold my-0">Hookah: $25 </h3>  
+                                                <h3 class="text-white fw-bold my-0">Refill: $15 </h3>  
+
+            </div>
+            <div class="menu text-uppercase">
+                <div class="row mt-5">
+                    <div class="col-md-6 col-12">
+                        <h2 class=" " style="background-color: #efeae7;">Flavors (Al Faker)</h2>
+
+<div class="category py-3">
+    <h3 class="text-white fw-bold my-0">Mint </h3>  
+    <h3 class="text-white fw-bold my-0">Orange </h3>  
+    <h3 class="text-white fw-bold my-0">Blueberry </h3>  
+    <h3 class="text-white fw-bold my-0">Watermelon </h3>  
+    <h3 class="text-white fw-bold my-0">Strawberry </h3>  
+    <h3 class="text-white fw-bold my-0">Peach </h3>  
+    <h3 class="text-white fw-bold my-0">Lemon </h3>  
+    <h3 class="text-white fw-bold my-0">Mango </h3>  
+    <h3 class="text-white fw-bold my-0">Pineapple </h3>  
+    <h3 class="text-white fw-bold my-0">Double Apple </h3>  
+    <h3 class="text-white fw-bold my-0">Grape </h3>  
+    <h3 class="text-white fw-bold my-0">Vanilla </h3>  
+    <h3 class="text-white fw-bold my-0">Banana </h3>  
+    <h3 class="text-white fw-bold my-0">Gum </h3>  
+    <h3 class="text-white fw-bold my-0">Guava </h3>  
+    <h3 class="text-white fw-bold my-0">Kiwi </h3>  
+    <h3 class="text-white fw-bold my-0">Ice Cream </h3>  
+        <h3 class="text-white fw-bold my-0">Spicy Chai </h3>  
+    <h3 class="text-white fw-bold my-0">Paan </h3>  
+    <h3 class="text-white fw-bold my-0">Chief Commissioner</h3>  
+    <h3 class="text-white fw-bold my-0">Paan Raas </h3>  
+    <h3 class="text-white fw-bold my-0">Lychee</h3>  
+    <h3 class="text-white fw-bold my-0"> Gum Mint</h3>  
+    <h3 class="text-white fw-bold my-0">Orange Mint</h3>  
+
+</div>
+
+                        
+
+                    </div>
+                   <div class="col-md-6 col-12">
+    <h2 class="" style="background-color: #efeae7;">Flavors (Adalya)</h2>
+
+    <div class="category py-3">
+        <h3 class="text-white fw-bold my-0">Istanbul Night </h3>  
+        <h3 class="text-white fw-bold my-0">Ice Lemon Mint </h3>  
+        <h3 class="text-white fw-bold my-0">Love 66 </h3>  
+        <h3 class="text-white fw-bold my-0">Lady Killer</h3>  
+                <h3 class="text-white fw-bold my-0">Sky Fall </h3>  
+
+    </div>
+
+    <h2 class="" style="background-color: #efeae7;">Flavors (Starbuzz)</h2>
+
+    <div class="category py-3">
+        <h3 class="text-white fw-bold my-0">Blue Mist </h3>  
+        <h3 class="text-white fw-bold my-0">Mighty Freeze </h3>  
+        <h3 class="text-white fw-bold my-0">Queen of Sex </h3>  
+        <h3 class="text-white fw-bold my-0">Sex on the Beach </h3>    
+        <h3 class="text-white fw-bold my-0">Code 69 </h3>   
+                <h3 class="text-white fw-bold my-0">Irish Peach</h3>    
+        <h3 class="text-white fw-bold my-0">Sunshine Mix - Lady killer, Irish peach, and Mighty freeze </h3>    
+        <h3 class="text-white fw-bold my-0">Royalz Mix - Vanilla, Gum Mint, Lemon, and Blueberry </h3>    
+        <h3 class="text-white fw-bold my-0"> Khaleeji Mix - Lady Killer and Skyfall </h3>    
+        <h3 class="text-white fw-bold my-0">Garden of Eden - Bluemist, Orange, and Mint  </h3>    
+                <h3 class="text-white fw-bold my-0">Court Jester - Bluemist and Love 66 </h3>    
+        <h3 class="text-white fw-bold my-0">Arabian Cloud  - Queen of Sex and Lemon Mint    </h3>    
+
+
+    </div>
+</div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
