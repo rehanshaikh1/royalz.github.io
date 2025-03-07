@@ -21,12 +21,11 @@
     } @font-face { font-family: black-mango-bold; src: url(assets/fonts/black-mango/OTF/BlackMango-Bold.otf);
     } a { font-family: "Crimson Pro", serif; } h1, h2, h3, h4, h5, h6 { font-family:
     "black-mango-bold", serif; } p { font-family: "Open Sans", sans-serif;
-    } section{ overflow-x: hidden; } .home-section { height: 100vh; width:
-    100%; background: url(assets/img/uri_ifs___M_eiIv6azeqVLRjSEBDxq_tSR51MLhZpbaDIIPdjeKh0o.jpg);
-    background-repeat: no-repeat; background-size: cover; background-position:
-    center; } #navbarNav ul li a { font-size: 20px; padding-top: 10px; padding-bottom:
-    10px; color: #333; border-radius: 4px; } .line-nav { height: 5px !important;
-    width: 100%; color: #fff; opacity: 1 !important; } #inquire-section { height:
+    } .home-section { border-bottom: 5px solid #ffc107 !important; height: 100%; width:
+    100%; background: #fff;
+     } .navbar-toggler:focus{box-shadow: none;} #navbarNav ul li{padding: 0 30px;} #navbarNav ul li a { text-align: left; font-size: 20px; padding-top: 10px; padding-bottom:
+    10px; color: #333; } .line-nav { height: 2px !important;
+    width: 100%; color: #333; opacity: 1 !important; } #inquire-section { height:
     100%; width: 100%; background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39,
     50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
     background-repeat: no-repeat; background-size: cover; } #about-section
@@ -68,16 +67,9 @@
     center center; height: 100%; } /* .dinner-menu-section .menu h3.fw-light
     { text-transform: capitalize; } */ .dinner-menu-section .menu * { font-family:
     "Cardo", serif !important; } ul li button{ font-family: "black-mango-bold",
-    serif; } @media (max-width: 991px) { .navbar-nav .nav-item { margin: 10px
-    0; } .navbar-nav { width: 50% !important; } .home-section .royalz_text
-    { float: right; margin-right: 0 !important; } #events-section .box { margin:
-    20px 0; } #events-section .box img { object-fit: cover; } #events-section
-    { height: 100%; } #cater-section { height: 100%; } #cater-section .box
-    .text { margin: 30px 0 !important; } #about-section .col-lg-3 { text-align:
-    center; } } @media (max-width: 575px) { /* Adjust breakpoint as needed
+    serif; }  @media (max-width: 575px) { /* Adjust breakpoint as needed
     */ #about-section { padding-top: 0 !important; } #inquire-section { padding-bottom:
-    0 !important; } .home-section .container-fluid { padding-top: 0 !important;
-    } .home-section .royalz_text img { width: 190px; } .royalz_text { margin-top:
+    0 !important; }  .royalz_text { margin-top:
     -10px !important; } .video-section .content { left: -17% !important; }
     .video-section .social-icons a { margin-left: 0 !important; } .main-img
     img { width: 300px; } .eat-smoke-section { height: 100vh; } .dinner-menu-section
@@ -99,10 +91,133 @@
     1px solid #fff; padding: 15px 0; } .cat-container{ background-color: #fff;
     color: #000 !important; padding: 30px; } .inner-cat{ border-left: 1px solid
     #333; padding-left: 20px; }
+    
   </style>
   
   <body>
     <div class="">
+        
+      <section class="home-section" id="home-section">
+        <div class="container-fluid px-0 ">
+          <div class="text-center d-none d-sm-block">
+            <img src="assets/img/tiger.svg" width="100px" alt="">
+            <h4>
+              Royaltz Restaurant & Lounge
+            </h4>
+          </div>
+          <div class="container d-none d-sm-block">
+            <hr class="line-nav px-5 mb-0" />
+          </div>
+          <nav class="navbar navbar-expand-lg bg-transparent d-none d-sm-block pb-2 pt-2  ">
+            <div class="container-fluid">
+              <!-- Navbar Toggler Button -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
+                    License - https://fontawesome.com/license/free Copyright 2025 Fonticons,
+                    Inc.-->
+                    <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <!-- Navbar Links -->
+              <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="index.html#home-section">
+                      Home
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="index.html#eat-smoke-section">
+                      Menu
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="index.html#events-section">
+                      Events
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="index.html#reserve-section">
+                      Reserve
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="index.html#inquire-section">
+                      Follow
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <nav class="navbar navbar-expand-lg bg-transparent d-block d-sm-none">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+              <!-- Logo -->
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/img/tiger.svg" alt="Logo" height="60">
+                <!-- Update with your logo path and size -->
+              </a>
+              <!-- Navbar Toggler Button -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24"
+                  height="24">
+                    <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+              <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase" href="index.html#home-section">
+                    Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase" href="index.html#eat-smoke-section">
+                    Menu
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase" href="index.html#events-section">
+                    Events
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase" href="index.html#reserve-section">
+                    Reserve
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase" href="index.html#inquire-section">
+                    Follow
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- <div class="div container ">
+          <div class="div royalz_text float-end text-center me-5 mt-3">
+          <img src="assets/img/tiger.svg" width="250px" class=" ms-auto" alt="">
+          <h1 class="text-warning" style="margin-top: -23px;">Royalz</h1>
+          <p class="mb-0 text-white text-uppercase small" style="letter-spacing: 4px;">Restaurant
+          </p>
+          <p class="text-white text-uppercase small" style="letter-spacing: 4px;">& Lounge</p>
+          </div>
+          </div> -->
+        </div>
+      </section>
       <section id="eat-menu" class="dinner-menu-section d-sm-block">
         <div class="container ">
           <div class="heading">
@@ -110,7 +225,7 @@
               Menu
             </h1>
           </div>
-          <ul class="nav justify-content-center pb-3" id="myTab" role="tablist">
+          <ul class="nav justify-content-center pt-1  pb-3" id="myTab" role="tablist">
             <li class="" role="presentation">
               <button class="btn active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
               type="button" role="tab" aria-controls="home" aria-selected="true">
