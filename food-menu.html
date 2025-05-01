@@ -1987,7 +1987,7 @@
            }
          
            // Update the URL hash when a tab is clicked
-           document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab = >{
+           document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab =>{
              tab.addEventListener("click",
              function() {
                let newHash = Object.keys(tabMap).find(key = >tabMap[key] === this.id);
