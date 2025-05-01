@@ -1990,7 +1990,7 @@
            document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab =>{
              tab.addEventListener("click",
              function() {
-               let newHash = Object.keys(tabMap).find(key = >tabMap[key] === this.id);
+               let newHash = Object.keys(tabMap).find(key =>tabMap[key] === this.id);
                if (newHash) {
                  history.pushState(null, null, "#" + newHash);
                  console.log("Tab changed, new URL hash:", newHash);
