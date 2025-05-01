@@ -1,1800 +1,1970 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
-    <title>
-      Royalz Restaurant & Lounge
-    </title>
-  </head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-    @font-face { font-family: Agrandir-Regular; src: url(assets/fonts/agrandir/Agrandir-Regular.otf);
-    } @font-face { font-family: black-mango-bold; src: url(assets/fonts/black-mango/OTF/BlackMango-Bold.otf);
-    } a { font-family: "Crimson Pro", serif; } h1, h2, h3, h4, h5, h6 { font-family:
-    "black-mango-bold", serif; } p { font-family: "Open Sans", sans-serif;
-    } .home-section { border-bottom: 5px solid #ffc107 !important; height: 100%; width:
-    100%; background: #fff;
-     } .navbar-toggler:focus{box-shadow: none;} #navbarNav ul li{padding: 0 30px;} #navbarNav ul li a { text-align: left; font-size: 20px; padding-top: 10px; padding-bottom:
-    10px; color: #333; } .line-nav { height: 2px !important;
-    width: 100%; color: #333; opacity: 1 !important; } #inquire-section { height:
-    100%; width: 100%; background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39,
-    50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
-    background-repeat: no-repeat; background-size: cover; } #about-section
-    { height: 100%; width: 100%; background: linear-gradient(rgba(39, 50, 76,
-    0.9), rgba(39, 50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
-    background-repeat: no-repeat; background-size: cover; overflow-x: hidden;
-    } #about-section .text-info p { font-family: "Crimson Pro", serif; } .video-section
-    { position: relative; width: 100%; height: 100%; overflow: hidden; } .video-section
-    { position: relative; width: 100%; height: 100vh; overflow: hidden; } .video-section
-    video { position: absolute; top: 50%; left: 50%; transform: translate(-50%,
-    -50%); width: 100%; height: 100%; object-fit: cover; z-index: -1; } .video-section
-    .content { position: absolute; top: 50%; left: 0%; transform: translate(10%,
-    -50%); color: white; /* text-align: center; */ padding: 30px 50px; border-radius:
-    10px; } .video-section .btn-custom { background: #fff; color: #013927;
-    border-radius: 5px; padding: 10px 40px; font-size: 1.3rem; margin-right:
-    10px; text-transform: uppercase; } .video-section .btn-custom:hover { background:
-    #1c2538; color: #fff !important; } .video-section .social-icons a { color:
-    white; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; } .video-section
-    .social-icons a:hover { color: #ffd700; } #events-section { height: 100vh;
-    width: 100%; background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39,
-    50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
-    background-repeat: no-repeat; background-size: cover; } #events-section
-    .box { position: relative; text-align: center; } #events-section .box .innerboxtext
-    { display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,
-    -50%); width: 80%; background-color: #ffd700; color: #333; padding: 30px
-    0; font-family: "Crimson Pro", serif; } #cater-section { height: 100vh;
-    width: 100%; background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39,
-    50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
-    background-repeat: no-repeat; background-size: cover; } .eat-smoke-section
-    { height: 100vh; width: 100%; background: linear-gradient(rgba(39, 50,
-    76, 0.9), rgba(39, 50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
-    background-repeat: no-repeat; background-size: cover; } .dinner-menu-section
-    { height: 100vh; width: 100%; background: linear-gradient(rgba(39, 50,
-    76, 0.9), rgba(39, 50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
-    background-repeat: no-repeat; background-size: cover; overflow-y: scroll;
-    } .dinner-menu-section.lion-face { padding-top: 100px !important; background:
-    linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)), url(assets/img/99fd1c1274.gif);
-    background-repeat: no-repeat; background-size: cover; background-position:
-    center center; height: 100%; } /* .dinner-menu-section .menu h3.fw-light
-    { text-transform: capitalize; } */ .dinner-menu-section .menu * { font-family:
-    "Cardo", serif !important; } ul li button{ font-family: "black-mango-bold",
-    serif; }  @media (max-width: 575px) { /* Adjust breakpoint as needed
-    */ #about-section { padding-top: 0 !important; } #inquire-section { padding-bottom:
-    0 !important; }  .royalz_text { margin-top:
-    -10px !important; } .video-section .content { left: -17% !important; }
-    .video-section .social-icons a { margin-left: 0 !important; } .main-img
-    img { width: 300px; } .eat-smoke-section { height: 100vh; } .dinner-menu-section
-    { padding-right: 20px !important; padding-left: 20px !important; } } .dinner-menu-section
-    .category h3 { font-weight: 300 !important; font-size: 21px; } .dinner-menu-section
-    h2 { font-size: 32px; } ul li{ list-style-type: none; } ul li button{ font-size:
-    20px !important; border: 1px solid #fff !important; text-transform: uppercase;
-    padding: 15px 30px !important; border-radius: 0 !important; color: #fff
-    !important; } ul li button:hover{ background-color: #fff !important; color:
-    #333 !important; } ul li button.active{ background-color: #fff !important;
-    color: #333 !important; } @media only screen and (max-width: 575px) { .dinner-menu-section
-    { height: 100%; width: 100%; background: linear-gradient(rgba(39, 50, 76,
-    0.9), rgba(39, 50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
-    background-repeat: no-repeat; background-size: cover; overflow-y: scroll;
-    padding-bottom: 50px !important; } ul li button{ font-size: 20px !important;
-    border: 1px solid #fff !important; text-transform: uppercase; padding:
-    10px 15px !important; border-radius: 0 !important; color: #fff !important;
-    } } .category { border-bottom: 1px solid #e4e4e4; } .b-d{ border-bottom:
-    1px solid #fff; padding: 15px 0; } .cat-container{ background-color: #fff;
-    color: #000 !important; padding: 30px; } .inner-cat{ border-left: 1px solid
-    #333; padding-left: 20px; }
-
-
-
-    @media (max-width: 768px) { /* Adjust the max-width as needed */
-  .bottom-content {
-    text-align: center; /* Ensures text inside is centered */
-  }
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+         rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+         crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+      <title>
+         Royalz Restaurant & Lounge
+      </title>
+   </head>
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+      @font-face { font-family: Agrandir-Regular; src: url(assets/fonts/agrandir/Agrandir-Regular.otf);
+      } @font-face { font-family: black-mango-bold; src: url(assets/fonts/black-mango/OTF/BlackMango-Bold.otf);
+      } a { font-family: "Crimson Pro", serif; } h1, h2, h3, h4, h5, h6 { font-family:
+      "black-mango-bold", serif; } p { font-family: "Open Sans", sans-serif;
+      } .home-section { border-bottom: 5px solid #ffc107 !important; height: 100%; width:
+      100%; background: #fff;
+      } .navbar-toggler:focus{box-shadow: none;} #navbarNav ul li{padding: 0 30px;} #navbarNav ul li a { text-align: left; font-size: 20px; padding-top: 10px; padding-bottom:
+      10px; color: #333; } .line-nav { height: 2px !important;
+      width: 100%; color: #333; opacity: 1 !important; } #inquire-section { height:
+      100%; width: 100%; background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39,
+      50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+      background-repeat: no-repeat; background-size: cover; } #about-section
+      { height: 100%; width: 100%; background: linear-gradient(rgba(39, 50, 76,
+      0.9), rgba(39, 50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+      background-repeat: no-repeat; background-size: cover; overflow-x: hidden;
+      } #about-section .text-info p { font-family: "Crimson Pro", serif; } .video-section
+      { position: relative; width: 100%; height: 100%; overflow: hidden; } .video-section
+      { position: relative; width: 100%; height: 100vh; overflow: hidden; } .video-section
+      video { position: absolute; top: 50%; left: 50%; transform: translate(-50%,
+      -50%); width: 100%; height: 100%; object-fit: cover; z-index: -1; } .video-section
+      .content { position: absolute; top: 50%; left: 0%; transform: translate(10%,
+      -50%); color: white; /* text-align: center; */ padding: 30px 50px; border-radius:
+      10px; } .video-section .btn-custom { background: #fff; color: #013927;
+      border-radius: 5px; padding: 10px 40px; font-size: 1.3rem; margin-right:
+      10px; text-transform: uppercase; } .video-section .btn-custom:hover { background:
+      #1c2538; color: #fff !important; } .video-section .social-icons a { color:
+      white; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; } .video-section
+      .social-icons a:hover { color: #ffd700; } #events-section { height: 100vh;
+      width: 100%; background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39,
+      50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+      background-repeat: no-repeat; background-size: cover; } #events-section
+      .box { position: relative; text-align: center; } #events-section .box .innerboxtext
+      { display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,
+      -50%); width: 80%; background-color: #ffd700; color: #333; padding: 30px
+      0; font-family: "Crimson Pro", serif; } #cater-section { height: 100vh;
+      width: 100%; background: linear-gradient(rgba(39, 50, 76, 0.9), rgba(39,
+      50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+      background-repeat: no-repeat; background-size: cover; } .eat-smoke-section
+      { height: 100vh; width: 100%; background: linear-gradient(rgba(39, 50,
+      76, 0.9), rgba(39, 50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+      background-repeat: no-repeat; background-size: cover; } .dinner-menu-section
+      { height: 100vh; width: 100%; background: linear-gradient(rgba(39, 50,
+      76, 0.9), rgba(39, 50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+      background-repeat: no-repeat; background-size: cover; overflow-y: scroll;
+      } .dinner-menu-section.lion-face { padding-top: 100px !important; background:
+      linear-gradient(rgba(39, 50, 76, 0.9), rgba(39, 50, 76, 0.9)), url(assets/img/99fd1c1274.gif);
+      background-repeat: no-repeat; background-size: cover; background-position:
+      center center; height: 100%; } /* .dinner-menu-section .menu h3.fw-light
+      { text-transform: capitalize; } */ .dinner-menu-section .menu * { font-family:
+      "Cardo", serif !important; } ul li button{ font-family: "black-mango-bold",
+      serif; }  @media (max-width: 575px) { /* Adjust breakpoint as needed
+      */ #about-section { padding-top: 0 !important; } #inquire-section { padding-bottom:
+      0 !important; }  .royalz_text { margin-top:
+      -10px !important; } .video-section .content { left: -17% !important; }
+      .video-section .social-icons a { margin-left: 0 !important; } .main-img
+      img { width: 300px; } .eat-smoke-section { height: 100vh; } .dinner-menu-section
+      { padding-right: 20px !important; padding-left: 20px !important; } } .dinner-menu-section
+      .category h3 { font-weight: 300 !important; font-size: 21px; } .dinner-menu-section
+      h2 { font-size: 32px; } ul li{ list-style-type: none; } ul li button{ font-size:
+      20px !important; border: 1px solid #fff !important; text-transform: uppercase;
+      padding: 15px 30px !important; border-radius: 0 !important; color: #fff
+      !important; } ul li button:hover{ background-color: #fff !important; color:
+      #333 !important; } ul li button.active{ background-color: #fff !important;
+      color: #333 !important; } @media only screen and (max-width: 575px) { .dinner-menu-section
+      { height: 100%; width: 100%; background: linear-gradient(rgba(39, 50, 76,
+      0.9), rgba(39, 50, 76, 0.9)), url('assets/img/uri_ifs___M_2jS4mZlcj0jGGrKBSTrdeFWTPEoPMV3oBACU6r5ZICQ.jpg');
+      background-repeat: no-repeat; background-size: cover; overflow-y: scroll;
+      padding-bottom: 50px !important; } ul li button{ font-size: 20px !important;
+      border: 1px solid #fff !important; text-transform: uppercase; padding:
+      10px 15px !important; border-radius: 0 !important; color: #fff !important;
+      } } .category { border-bottom: 1px solid #e4e4e4; } .b-d{ border-bottom:
+      1px solid #fff; padding: 15px 0; } .cat-container{ background-color: #fff;
+      color: #000 !important; padding: 30px; } .inner-cat{ border-left: 1px solid
+      #333; padding-left: 20px; }
+      @media (max-width: 768px) { /* Adjust the max-width as needed */
+      .bottom-content {
+      text-align: center; /* Ensures text inside is centered */
+      }
       .bottom-content h5 {
-    font-size:0.90rem;
-  }
-}
-
-  </style>
-  
-  <body>
-    <div class="">
-        
+      font-size:0.90rem;
+      }
+      }
+   </style>
+   <body>
+      <div class="">
       <section class="home-section" id="home-section">
-        <div class="container-fluid px-0 ">
-          <div class="text-center d-none d-sm-block">
-            <img src="assets/img/tiger.svg" width="100px" alt="">
-            <h4>
-              Royaltz Restaurant & Lounge
-            </h4>
-          </div>
-          <div class="container d-none d-sm-block">
-            <hr class="line-nav px-5 mb-0" />
-          </div>
-          <nav class="navbar navbar-expand-lg bg-transparent d-none d-sm-block pb-2 pt-2  ">
-            <div class="container-fluid">
-              <!-- Navbar Toggler Button -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
-                    License - https://fontawesome.com/license/free Copyright 2025 Fonticons,
-                    Inc.-->
-                    <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-                    />
-                  </svg>
-                </span>
-              </button>
-              <!-- Navbar Links -->
-              <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-                <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
-                  <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="index.html#home-section">
-                      Home
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="index.html#eat-smoke-section">
-                      Menu
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="index.html#events-section">
-                      Events
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="index.html#reserve-section">
-                      Reserve
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-uppercase" href="index.html#inquire-section">
-                      Follow
-                    </a>
-                  </li>
-                </ul>
-              </div>
+         <div class="container-fluid px-0 ">
+            <div class="text-center d-none d-sm-block">
+               <img src="assets/img/tiger.svg" width="100px" alt="">
+               <h4>
+                  Royaltz Restaurant & Lounge
+               </h4>
             </div>
-          </nav>
-          <nav class="navbar navbar-expand-lg bg-transparent d-block d-sm-none">
-            <div class="container-fluid d-flex justify-content-between align-items-center">
-              <!-- Logo -->
-              <a class="navbar-brand" href="index.html">
-                <img src="assets/img/tiger.svg" alt="Logo" height="60">
-                <!-- Update with your logo path and size -->
-              </a>
-              <!-- Navbar Toggler Button -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24"
-                  height="24">
-                    <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-                    />
-                  </svg>
-                </span>
-              </button>
+            <div class="container d-none d-sm-block">
+               <hr class="line-nav px-5 mb-0" />
             </div>
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-              <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="index.html#home-section">
-                    Home
+            <nav class="navbar navbar-expand-lg bg-transparent d-none d-sm-block pb-2 pt-2  ">
+               <div class="container-fluid">
+                  <!-- Navbar Toggler Button -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                     aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                           <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
+                              License - https://fontawesome.com/license/free Copyright 2025 Fonticons,
+                              Inc.-->
+                           <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                              />
+                        </svg>
+                     </span>
+                  </button>
+                  <!-- Navbar Links -->
+                  <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                     <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
+                        <li class="nav-item">
+                           <a class="nav-link text-uppercase" href="index.html#home-section">
+                           Home
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link text-uppercase" href="index.html#eat-smoke-section">
+                           Menu
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link text-uppercase" href="index.html#events-section">
+                           Events
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link text-uppercase" href="index.html#reserve-section">
+                           Reserve
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link text-uppercase" href="index.html#inquire-section">
+                           Follow
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg bg-transparent d-block d-sm-none">
+               <div class="container-fluid d-flex justify-content-between align-items-center">
+                  <!-- Logo -->
+                  <a class="navbar-brand" href="index.html">
+                     <img src="assets/img/tiger.svg" alt="Logo" height="60">
+                     <!-- Update with your logo path and size -->
                   </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="index.html#eat-smoke-section">
-                    Menu
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="index.html#events-section">
-                    Events
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="index.html#reserve-section">
-                    Reserve
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="index.html#inquire-section">
-                    Follow
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <!-- <div class="div container ">
-          <div class="div royalz_text float-end text-center me-5 mt-3">
-          <img src="assets/img/tiger.svg" width="250px" class=" ms-auto" alt="">
-          <h1 class="text-warning" style="margin-top: -23px;">Royalz</h1>
-          <p class="mb-0 text-white text-uppercase small" style="letter-spacing: 4px;">Restaurant
-          </p>
-          <p class="text-white text-uppercase small" style="letter-spacing: 4px;">& Lounge</p>
-          </div>
-          </div> -->
-        </div>
+                  <!-- Navbar Toggler Button -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                     aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24"
+                           height="24">
+                           <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                              />
+                        </svg>
+                     </span>
+                  </button>
+               </div>
+               <!-- Navbar Links -->
+               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                  <ul class="navbar-nav w-100 justify-content-around flex-lg-row flex-column text-center">
+                     <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="index.html#home-section">
+                        Home
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="index.html#eat-smoke-section">
+                        Menu
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="index.html#events-section">
+                        Events
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="index.html#reserve-section">
+                        Reserve
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="index.html#inquire-section">
+                        Follow
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- <div class="div container ">
+               <div class="div royalz_text float-end text-center me-5 mt-3">
+               <img src="assets/img/tiger.svg" width="250px" class=" ms-auto" alt="">
+               <h1 class="text-warning" style="margin-top: -23px;">Royalz</h1>
+               <p class="mb-0 text-white text-uppercase small" style="letter-spacing: 4px;">Restaurant
+               </p>
+               <p class="text-white text-uppercase small" style="letter-spacing: 4px;">& Lounge</p>
+               </div>
+               </div> -->
+         </div>
       </section>
       <section id="eat-menu" class="dinner-menu-section d-sm-block">
-        <div class="container ">
-          <div class="heading">
-            <h1 class="display-3 text-warning mt-5 mb-4 text-center">
-              Menu
-            </h1>
-          </div>
-          <ul class="nav justify-content-center pt-1  pb-3" id="myTab" role="tablist">
-            <li class="" role="presentation">
-              <button class="btn active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-              type="button" role="tab" aria-controls="home" aria-selected="true">
-                EAT
-              </button>
-            </li>
-            <li class="mx-2 mx-sm-5" role="presentation">
-              <button class="btn" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-              type="button" role="tab" aria-controls="profile" aria-selected="false">
-                SMOKE
-              </button>
-            </li>
-            <li class="" role="presentation">
-              <button class="btn" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-              type="button" role="tab" aria-controls="contact" aria-selected="false">
-                DRINK
-              </button>
-            </li>
-          </ul>
-          <!-- Tab Content -->
-          <div class="tab-content mt-3" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <div class="row mt-5 menu d-none d-md-flex">
-                <div class="col-md-6 col-12">
-                  <div class="cat-container">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Appetizers
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Tzatziki
-                          <span class="ms-auto">
-                            $8.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Greek sauce made from yogurt, cucumber, garlic, olive oil, lemon juice
-                          and various herbs
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Hummus
-                          <span class="ms-auto">
-                            $9.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Chick Peas, Garlic, Lemon Juice, Salt, Tahini
-
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Falafel
-                          <span class="ms-auto">
-                            $9.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Bites of Chick Peas with Onion, Garlic, Parsley, and Spices
-
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Baba Ganoush
-                          <span class="ms-auto">
-                            $9.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Roasted eggplant, mashed garlic, spices topped with olive oil
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Grape Leaves
-                          <span class="ms-auto">
-                            $12.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Grape salad stuffed with rice and spices
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Hummus with Shawarma
-                          <span class="ms-auto">
-                            $15.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Our Traditional Hummus with Shredded Beef or Chicken Shawarma Added on Top
-
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Mezze Platter
-                          <span class="ms-auto">
-                            $24.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Includes hummus, baba ganoush, tabouleh, tzatziki sauce, falafel, and grape
-                          leaves
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Wings & Fries
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Jumbo Chicken Wings Flavors: Plain, Mild, Hot, Lemon Pepper, BBQ, Honey BBQ
-
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Entrées
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Mix grill 
-                          <span class="ms-auto">
-                            $55.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                         lamb, chicken, kofta, fries served with rice, bulgur and salad
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Falafel Platter
-                          <span class="ms-auto">
-                            $16.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          A generous serving of crispy, golden falafel served alongside fragrant rice, bulgur, and a fresh side salad. This platter offers a hearty, plant-based meal with savory flavors and textures that complement each other perfectly.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Gyro Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Tender, spiced gyro meat served with a side of rice, bulgur, and a refreshing salad. This platter combines the rich flavors of seasoned lamb and beef with Mediterranean sides for a satisfying, savory meal.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Chicken Shish Tawook Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Juicy grilled chicken breast marinated in Mediterranean spices, served with rice, bulgur, and a side salad. The tender chicken, paired with flavorful sides, makes this platter a perfect choice for a light yet fulfilling meal.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Arabic Chicken Shawarma Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Tender slices of spiced chicken shawarma served with rice, bulgur, and a crisp salad. This platter brings the smoky, flavorful chicken to the forefront, complemented by fragrant sides that complete the dish.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Arabic Beef Shawarma Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Sliced, spiced beef shawarma served with rice, bulgur, and a fresh side salad. The rich, savory beef is paired with the perfect Mediterranean sides, making this platter a hearty and satisfying meal.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Kofta Kebob Platter
-                          <span class="ms-auto">
-                            $19.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Grilled skewers of seasoned ground meat beef served with rice, bulgur, and a refreshing side salad. The juicy, flavorful kofta kebobs are a perfect combination of savory spices and tender meat, ideal for those craving grilled flavors.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Lamb Kebob Platter
-                          <span class="ms-auto">
-                            $24.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Tender, grilled lamb kebabs served with a side of rice, bulgur, and a crisp salad. The succulent lamb, with its rich and smoky flavor, is perfectly paired with the lightness of the rice and salad for a satisfying, flavorful meal.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Salmon Platter
-                          <span class="ms-auto">
-                            $28.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Perfectly grilled salmon fillet served with rice, bulgur, and a side salad. This platter offers the delicate, smoky flavor of the salmon, complemented by Mediterranean sides for a healthy, fresh, and filling meal.
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                   <div class="cat-container mt-5 ">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Hot Beverages
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Turkish Coffee Pot
-                          <span class="ms-auto">
-                            $5.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Hot Tea Pot
-                          <span class="ms-auto">
-                            $10.00
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                 
-                  
-                </div>
-                <div class="col-md-6 col-12">
-                  <div class="cat-container">
-                    <h2 class="text-center fw-bold display-2 text-uppercase ">
-                      Soup & Salads
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Lentil Soup
-                          <span class="ms-auto">
-                            $6.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lentil, garlic, onion, carrots, and spices
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Garden Salad
-                          <span class="ms-auto">
-                            $8.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Mixed greens served with vinaigrette dressing
-                        </h3>
-                      </div>
-                       <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Tabouleh Salad
-                          <span class="ms-auto">
-                            $10.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Bulgur, tomato, parsley, lemon juice, spices
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Eggplant Salad
-                          <span class="ms-auto">
-                            $12.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                             Roasted eggplant, herbs, olive oil
-
-                        </h3>
-                      </div>
-                     
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Greek Salad
-                          <span class="ms-auto">
-                            $12.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Cucumber, green peppers, tomatoes, Kalamata olives, topped with feta cheese
-                          and vinaigrette dressing
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase ">
-                      Wraps (Served w/ Fries)
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Falafel Pita
-                          <span class="ms-auto">
-                            $9.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, and tahini sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Gyro Wrap
-                          <span class="ms-auto">
-                            $11.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, onion, tzatziki sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Chicken Shish Tawook
-                          <span class="ms-auto">
-                            $11.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, garlic sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Kofta Wrap
-                          <span class="ms-auto">
-                            $11.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, and tahini sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Arabic Chicken Shawarma
-                          <span class="ms-auto">
-                            $14.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, garlic sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Arabic Beef Shawarma
-                          <span class="ms-auto">
-                            $14.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, onion, tahini sauce
-                        </h3>
-                      </div>
-                       <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Mixed Shawarma
-                          <span class="ms-auto">
-                            $20.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, garlic sauce
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase ">
-                      Sides
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          French Fries
-                          <span class="ms-auto">
-                            $5.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Greek Fries
-                          <span class="ms-auto">
-                            $7.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Basmati Rice
-                          <span class="ms-auto">
-                            $6.00
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase ">
-                      Desserts
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Cheesecake
-                          <span class="ms-auto">
-                            $8.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Baklava with Ice Cream
-                          <span class="ms-auto">
-                            $8.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Kunafe
-                          <span class="ms-auto">
-                            $10.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Fruit Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Cold Beverages
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Deer Park Water
-                          <span class="ms-auto">
-                            $1.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Fiji Water
-                          <span class="ms-auto">
-                            $3.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Soda
-                          <span class="ms-auto">
-                            $3.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Perrier Mineral Water
-                          <span class="ms-auto">
-                            $4.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Red Bull (Sugar free available)
-                          <span class="ms-auto">
-                            $5.00
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  
-                 
-
-                  <!-- ... -->
-                </div>
-              </div>
-              <div class="row mt-5 menu d-flex d-md-none">
-                <div class="col-md-6 col-12">
-                  <div class="cat-container">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Appetizers
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-  <h3 class="text-dark fw-bold d-flex">
-    Samosas (4 pieces)
-    <span class="ms-auto">
-      $10.00
-    </span>
-  </h3>
-  <h3 class="text-dark fw-light">
-    Choice of chicken, lamb, or beef filling in crispy pastry
-  </h3>
-</div>
-
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Tzatziki
-                          <span class="ms-auto">
-                            $8.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Greek sauce made from yogurt, cucumber, garlic, olive oil, lemon juice
-                          and various herbs
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Hummus
-                          <span class="ms-auto">
-                            $9.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Chick Peas, Garlic, Lemon Juice, Salt, Tahini
-
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Falafel
-                          <span class="ms-auto">
-                            $9.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Bites of Chick Peas with Onion, Garlic, Parsley, and Spices
-
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Baba Ganoush
-                          <span class="ms-auto">
-                            $9.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Roasted eggplant, mashed garlic, spices topped with olive oil
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Grape Leaves
-                          <span class="ms-auto">
-                            $12.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Grape salad stuffed with rice and spices
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Hummus with Shawarma
-                          <span class="ms-auto">
-                            $15.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Our Traditional Hummus with Shredded Beef or Chicken Shawarma Added on Top
-
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Mezze Platter
-                          <span class="ms-auto">
-                            $24.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Includes hummus, baba ganoush, tabouleh, tzatziki sauce, falafel, and grape
-                          leaves
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Wings & Fries
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Jumbo Chicken Wings Flavors: Plain, Mild, Hot, Lemon Pepper, BBQ, Honey BBQ
-
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase ">
-                      Soup & Salads
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Lentil Soup
-                          <span class="ms-auto">
-                            $6.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lentil, garlic, onion, carrots, and spices
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Garden Salad
-                          <span class="ms-auto">
-                            $8.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Mixed greens served with vinaigrette dressing
-                        </h3>
-                      </div>
-                       <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Tabouleh Salad
-                          <span class="ms-auto">
-                            $10.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Bulgur, tomato, parsley, lemon juice, spices
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Fattoush
-                          <span class="ms-auto">
-                            $12.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Vegan chopped salad with pita chips
-                        </h3>
-                      </div>
-                     
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Greek Salad
-                          <span class="ms-auto">
-                            $12.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Cucumber, green peppers, tomatoes, Kalamata olives, topped with feta cheese
-                          and vinaigrette dressing
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase ">
-                      Wraps (Served w/ Fries)
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Falafel Pita
-                          <span class="ms-auto">
-                            $9.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, and tahini sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Gyro Wrap
-                          <span class="ms-auto">
-                            $11.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, onion, tzatziki sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Chicken Shish Tawook
-                          <span class="ms-auto">
-                            $11.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, garlic sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Kofta Wrap
-                          <span class="ms-auto">
-                            $11.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, and tahini sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Arabic Chicken Shawarma
-                          <span class="ms-auto">
-                            $14.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, garlic sauce
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Arabic Beef Shawarma
-                          <span class="ms-auto">
-                            $14.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, onion, tahini sauce
-                        </h3>
-                      </div>
-                       <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Mixed Shawarma
-                          <span class="ms-auto">
-                            $20.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Lettuce, tomatoes, pickles, garlic sauce
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Entrées
-                    </h2>
-                    <div class="inner-cat">
-                       <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Mix grill 
-                          <span class="ms-auto">
-                            $55.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                         lamb, chicken, kofta, fries served with rice, bulgur and salad
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Falafel Platter
-                          <span class="ms-auto">
-                            $16.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          A generous serving of crispy, golden falafel served alongside fragrant rice, bulgur, and a fresh side salad. This platter offers a hearty, plant-based meal with savory flavors and textures that complement each other perfectly.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Gyro Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Tender, spiced gyro meat served with a side of rice, bulgur, and a refreshing salad. This platter combines the rich flavors of seasoned lamb and beef with Mediterranean sides for a satisfying, savory meal.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Chicken Shish Tawook Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Juicy grilled chicken breast marinated in Mediterranean spices, served with rice, bulgur, and a side salad. The tender chicken, paired with flavorful sides, makes this platter a perfect choice for a light yet fulfilling meal.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Arabic Chicken Shawarma Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Tender slices of spiced chicken shawarma served with rice, bulgur, and a crisp salad. This platter brings the smoky, flavorful chicken to the forefront, complemented by fragrant sides that complete the dish.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Arabic Beef Shawarma Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Sliced, spiced beef shawarma served with rice, bulgur, and a fresh side salad. The rich, savory beef is paired with the perfect Mediterranean sides, making this platter a hearty and satisfying meal.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Kofta Kebob Platter
-                          <span class="ms-auto">
-                            $19.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Grilled skewers of seasoned ground meat beef served with rice, bulgur, and a refreshing side salad. The juicy, flavorful kofta kebobs are a perfect combination of savory spices and tender meat, ideal for those craving grilled flavors.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Lamb Kebob Platter
-                          <span class="ms-auto">
-                            $24.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Tender, grilled lamb kebabs served with a side of rice, bulgur, and a crisp salad. The succulent lamb, with its rich and smoky flavor, is perfectly paired with the lightness of the rice and salad for a satisfying, flavorful meal.
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Salmon Platter
-                          <span class="ms-auto">
-                            $28.00
-                          </span>
-                        </h3>
-                        <h3 class="text-dark fw-light">
-                          Perfectly grilled salmon fillet served with rice, bulgur, and a side salad. This platter offers the delicate, smoky flavor of the salmon, complemented by Mediterranean sides for a healthy, fresh, and filling meal.
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  
-
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase ">
-                      Sides
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          French Fries
-                          <span class="ms-auto">
-                            $5.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Greek Fries
-                          <span class="ms-auto">
-                            $7.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Basmati Rice
-                          <span class="ms-auto">
-                            $6.00
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase ">
-                      Desserts
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Cheesecake
-                          <span class="ms-auto">
-                            $8.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Baklava with Ice Cream
-                          <span class="ms-auto">
-                            $8.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Kunafe
-                          <span class="ms-auto">
-                            $10.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Fruit Platter
-                          <span class="ms-auto">
-                            $18.00
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Cold Beverages
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Deer Park Water
-                          <span class="ms-auto">
-                            $1.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Fiji Water
-                          <span class="ms-auto">
-                            $3.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Soda
-                          <span class="ms-auto">
-                            $3.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Perrier Mineral Water
-                          <span class="ms-auto">
-                            $4.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Red Bull (Sugar free available)
-                          <span class="ms-auto">
-                            $5.00
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="cat-container mt-5 ">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Hot Beverages
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Turkish Coffee Pot
-                          <span class="ms-auto">
-                            $5.00
-                          </span>
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold d-flex">
-                          Hot Tea Pot
-                          <span class="ms-auto">
-                            $10.00
-                          </span>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                 
-
-
-
-
-                </div>
-              </div>
-              <div class="my-5 bottom-content" >
-              <h5 class="text-light" style="font-family: 'Cardo', serif !important;"> Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness. Our menu items may contain or come into contact with eggs, wheat, peanuts, tree nuts, milk, soy, fish, and shellfish. While we take precautions, cross-contact is possible.</h5>
-              <h5 class="text-light mt-3" style="font-family: 'Cardo', serif !important; "> If you have allergies or dietary restrictions, please inform our staff before ordering. 
-                </h5>
+         <div class="container ">
+            <div class="heading">
+               <h1 class="display-3 text-warning mt-5 mb-4 text-center">
+                  Menu
+               </h1>
             </div>
-              
-            </div>
-            <div class="tab-pane fade my-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <div class="mt-5">
-                <h3 class="text-white fw-bold">
-                  Hookah : $25
-                </h3>
-                <h3 class="text-white fw-bold">
-                  Refill : $15
-                </h3>
-              </div>
-              <div class="row mt-5 menu d-none d-md-flex">
-                <div class="col-md-6 col-12">
-                  <div class="cat-container">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Al faker
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Mint
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Orange
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Blueberry
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Watermelon
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Strawberry
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Peach
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Lemon
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Mango
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Pineapple
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Double Apple
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Grape
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Vanilla
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Banana
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Gum
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Guava
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Kiwi
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Ice Cream
-                        </h3>
-                      </div>
-                      
-                      
-                      
-                    </div>
+            <ul class="nav justify-content-center pt-1  pb-3" id="myTab" role="tablist">
+               <li class="" role="presentation">
+                  <button class="btn active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                     type="button" role="tab" aria-controls="home" aria-selected="true">
+                  EAT
+                  </button>
+               </li>
+               <li class="mx-2 mx-sm-5" role="presentation">
+                  <button class="btn" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                     type="button" role="tab" aria-controls="profile" aria-selected="false">
+                  SMOKE
+                  </button>
+               </li>
+               <li class="" role="presentation">
+                  <button class="btn" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                     type="button" role="tab" aria-controls="contact" aria-selected="false">
+                  DRINK
+                  </button>
+               </li>
+            </ul>
+            <!-- Tab Content -->
+            <div class="tab-content mt-3" id="myTabContent">
+               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="row mt-5 menu d-none d-md-flex">
+                     <div class="col-md-6 col-12">
+                        <div class="cat-container">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Appetizers
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Tzatziki
+                                    <span class="ms-auto">
+                                    $8.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Greek sauce made from yogurt, cucumber, garlic, olive oil, lemon juice
+                                    and various herbs
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Hummus
+                                    <span class="ms-auto">
+                                    $9.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Chick Peas, Garlic, Lemon Juice, Salt, Tahini
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Falafel
+                                    <span class="ms-auto">
+                                    $9.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Bites of Chick Peas with Onion, Garlic, Parsley, and Spices
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Baba Ganoush
+                                    <span class="ms-auto">
+                                    $9.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Roasted eggplant, mashed garlic, spices topped with olive oil
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Grape Leaves
+                                    <span class="ms-auto">
+                                    $12.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Grape salad stuffed with rice and spices
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Hummus with Shawarma
+                                    <span class="ms-auto">
+                                    $15.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Our Traditional Hummus with Shredded Beef or Chicken Shawarma Added on Top
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Mezze Platter
+                                    <span class="ms-auto">
+                                    $24.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Includes hummus, baba ganoush, tabouleh, tzatziki sauce, falafel, and grape
+                                    leaves
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Wings & Fries
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Jumbo Chicken Wings Flavors: Plain, Mild, Hot, Lemon Pepper, BBQ, Honey BBQ
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Entrées
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Falafel Platter
+                                    <span class="ms-auto">
+                                    $16.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    A generous serving of crispy, golden falafel served alongside fragrant rice, bulgur, and a fresh side salad. This platter offers a hearty, plant-based meal with savory flavors and textures that complement each other perfectly.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Gyro Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Tender, spiced gyro meat served with a side of rice, bulgur, and a refreshing salad. This platter combines the rich flavors of seasoned lamb and beef with Mediterranean sides for a satisfying, savory meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Chicken Shish Tawook Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Juicy grilled chicken breast marinated in Mediterranean spices, served with rice, bulgur, and a side salad. The tender chicken, paired with flavorful sides, makes this platter a perfect choice for a light yet fulfilling meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Arabic Chicken Shawarma Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Tender slices of spiced chicken shawarma served with rice, bulgur, and a crisp salad. This platter brings the smoky, flavorful chicken to the forefront, complemented by fragrant sides that complete the dish.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Arabic Beef Shawarma Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Sliced, spiced beef shawarma served with rice, bulgur, and a fresh side salad. The rich, savory beef is paired with the perfect Mediterranean sides, making this platter a hearty and satisfying meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Kofta Kebob Platter
+                                    <span class="ms-auto">
+                                    $19.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Grilled skewers of seasoned ground meat beef served with rice, bulgur, and a refreshing side salad. The juicy, flavorful kofta kebobs are a perfect combination of savory spices and tender meat, ideal for those craving grilled flavors.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Lamb Kebob Platter
+                                    <span class="ms-auto">
+                                    $24.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Tender, grilled lamb kebabs served with a side of rice, bulgur, and a crisp salad. The succulent lamb, with its rich and smoky flavor, is perfectly paired with the lightness of the rice and salad for a satisfying, flavorful meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Salmon Platter
+                                    <span class="ms-auto">
+                                    $28.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Perfectly grilled salmon fillet served with rice, bulgur, and a side salad. This platter offers the delicate, smoky flavor of the salmon, complemented by Mediterranean sides for a healthy, fresh, and filling meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Mix grill 
+                                    <span class="ms-auto">
+                                    $55.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    lamb, chicken, kofta, fries served with rice, bulgur and salad
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5 ">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Hot Beverages
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Turkish Coffee Pot
+                                    <span class="ms-auto">
+                                    $5.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Hot Tea Pot
+                                    <span class="ms-auto">
+                                    $10.00
+                                    </span>
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-12">
+                        <div class="cat-container">
+                           <h2 class="text-center fw-bold display-2 text-uppercase ">
+                              Soup & Salads
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Lentil Soup
+                                    <span class="ms-auto">
+                                    $6.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lentil, garlic, onion, carrots, and spices
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Garden Salad
+                                    <span class="ms-auto">
+                                    $8.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Mixed greens served with vinaigrette dressing
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Tabouleh Salad
+                                    <span class="ms-auto">
+                                    $10.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Bulgur, tomato, parsley, lemon juice, spices
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Eggplant Salad
+                                    <span class="ms-auto">
+                                    $12.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Roasted eggplant, herbs, olive oil
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Greek Salad
+                                    <span class="ms-auto">
+                                    $12.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Cucumber, green peppers, tomatoes, Kalamata olives, topped with feta cheese
+                                    and vinaigrette dressing
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase ">
+                              Wraps (Served w/ Fries)
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Falafel Pita
+                                    <span class="ms-auto">
+                                    $9.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, and tahini sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Gyro Wrap
+                                    <span class="ms-auto">
+                                    $11.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, onion, tzatziki sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Chicken Shish Tawook
+                                    <span class="ms-auto">
+                                    $11.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, garlic sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Kofta Wrap
+                                    <span class="ms-auto">
+                                    $11.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, and tahini sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Arabic Chicken Shawarma
+                                    <span class="ms-auto">
+                                    $14.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, garlic sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Arabic Beef Shawarma
+                                    <span class="ms-auto">
+                                    $14.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, onion, tahini sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Mixed Shawarma
+                                    <span class="ms-auto">
+                                    $20.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, garlic sauce
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase ">
+                              Sides
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    French Fries
+                                    <span class="ms-auto">
+                                    $5.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Greek Fries
+                                    <span class="ms-auto">
+                                    $7.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Basmati Rice
+                                    <span class="ms-auto">
+                                    $6.00
+                                    </span>
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase ">
+                              Desserts
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Cheesecake
+                                    <span class="ms-auto">
+                                    $8.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Baklava with Ice Cream
+                                    <span class="ms-auto">
+                                    $8.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Kunafe
+                                    <span class="ms-auto">
+                                    $10.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Fruit Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Cold Beverages
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Deer Park Water
+                                    <span class="ms-auto">
+                                    $1.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Fiji Water
+                                    <span class="ms-auto">
+                                    $3.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Soda
+                                    <span class="ms-auto">
+                                    $3.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Perrier Mineral Water
+                                    <span class="ms-auto">
+                                    $4.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Red Bull (Sugar free available)
+                                    <span class="ms-auto">
+                                    $5.00
+                                    </span>
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- ... -->
+                     </div>
                   </div>
-                </div>
-                <div class="col-md-6 col-12">
-                  <div class="cat-container">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Afzal (Paan)
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Chief Commissioner
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Paan Raas
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Lychee
-                        </h3>
-                      </div>
-                    </div>
+                  <div class="row mt-5 menu d-flex d-md-none">
+                     <div class="col-md-6 col-12">
+                        <div class="cat-container">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Appetizers
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Samosas (4 pieces)
+                                    <span class="ms-auto">
+                                    $10.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Choice of chicken, lamb, or beef filling in crispy pastry
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Tzatziki
+                                    <span class="ms-auto">
+                                    $8.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Greek sauce made from yogurt, cucumber, garlic, olive oil, lemon juice
+                                    and various herbs
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Hummus
+                                    <span class="ms-auto">
+                                    $9.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Chick Peas, Garlic, Lemon Juice, Salt, Tahini
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Falafel
+                                    <span class="ms-auto">
+                                    $9.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Bites of Chick Peas with Onion, Garlic, Parsley, and Spices
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Baba Ganoush
+                                    <span class="ms-auto">
+                                    $9.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Roasted eggplant, mashed garlic, spices topped with olive oil
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Grape Leaves
+                                    <span class="ms-auto">
+                                    $12.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Grape salad stuffed with rice and spices
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Hummus with Shawarma
+                                    <span class="ms-auto">
+                                    $15.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Our Traditional Hummus with Shredded Beef or Chicken Shawarma Added on Top
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Mezze Platter
+                                    <span class="ms-auto">
+                                    $24.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Includes hummus, baba ganoush, tabouleh, tzatziki sauce, falafel, and grape
+                                    leaves
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Wings & Fries
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Jumbo Chicken Wings Flavors: Plain, Mild, Hot, Lemon Pepper, BBQ, Honey BBQ
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase ">
+                              Soup & Salads
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Lentil Soup
+                                    <span class="ms-auto">
+                                    $6.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lentil, garlic, onion, carrots, and spices
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Garden Salad
+                                    <span class="ms-auto">
+                                    $8.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Mixed greens served with vinaigrette dressing
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Tabouleh Salad
+                                    <span class="ms-auto">
+                                    $10.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Bulgur, tomato, parsley, lemon juice, spices
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Fattoush
+                                    <span class="ms-auto">
+                                    $12.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Vegan chopped salad with pita chips
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Greek Salad
+                                    <span class="ms-auto">
+                                    $12.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Cucumber, green peppers, tomatoes, Kalamata olives, topped with feta cheese
+                                    and vinaigrette dressing
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase ">
+                              Wraps (Served w/ Fries)
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Falafel Pita
+                                    <span class="ms-auto">
+                                    $9.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, and tahini sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Gyro Wrap
+                                    <span class="ms-auto">
+                                    $11.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, onion, tzatziki sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Chicken Shish Tawook
+                                    <span class="ms-auto">
+                                    $11.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, garlic sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Kofta Wrap
+                                    <span class="ms-auto">
+                                    $11.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, and tahini sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Arabic Chicken Shawarma
+                                    <span class="ms-auto">
+                                    $14.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, garlic sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Arabic Beef Shawarma
+                                    <span class="ms-auto">
+                                    $14.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, onion, tahini sauce
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Mixed Shawarma
+                                    <span class="ms-auto">
+                                    $20.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Lettuce, tomatoes, pickles, garlic sauce
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Entrées
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Falafel Platter
+                                    <span class="ms-auto">
+                                    $16.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    A generous serving of crispy, golden falafel served alongside fragrant rice, bulgur, and a fresh side salad. This platter offers a hearty, plant-based meal with savory flavors and textures that complement each other perfectly.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Gyro Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Tender, spiced gyro meat served with a side of rice, bulgur, and a refreshing salad. This platter combines the rich flavors of seasoned lamb and beef with Mediterranean sides for a satisfying, savory meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Chicken Shish Tawook Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Juicy grilled chicken breast marinated in Mediterranean spices, served with rice, bulgur, and a side salad. The tender chicken, paired with flavorful sides, makes this platter a perfect choice for a light yet fulfilling meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Arabic Chicken Shawarma Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Tender slices of spiced chicken shawarma served with rice, bulgur, and a crisp salad. This platter brings the smoky, flavorful chicken to the forefront, complemented by fragrant sides that complete the dish.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Arabic Beef Shawarma Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Sliced, spiced beef shawarma served with rice, bulgur, and a fresh side salad. The rich, savory beef is paired with the perfect Mediterranean sides, making this platter a hearty and satisfying meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Kofta Kebob Platter
+                                    <span class="ms-auto">
+                                    $19.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Grilled skewers of seasoned ground meat beef served with rice, bulgur, and a refreshing side salad. The juicy, flavorful kofta kebobs are a perfect combination of savory spices and tender meat, ideal for those craving grilled flavors.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Lamb Kebob Platter
+                                    <span class="ms-auto">
+                                    $24.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Tender, grilled lamb kebabs served with a side of rice, bulgur, and a crisp salad. The succulent lamb, with its rich and smoky flavor, is perfectly paired with the lightness of the rice and salad for a satisfying, flavorful meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Salmon Platter
+                                    <span class="ms-auto">
+                                    $28.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    Perfectly grilled salmon fillet served with rice, bulgur, and a side salad. This platter offers the delicate, smoky flavor of the salmon, complemented by Mediterranean sides for a healthy, fresh, and filling meal.
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Mix grill 
+                                    <span class="ms-auto">
+                                    $55.00
+                                    </span>
+                                 </h3>
+                                 <h3 class="text-dark fw-light">
+                                    lamb, chicken, kofta, fries served with rice, bulgur and salad
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase ">
+                              Sides
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    French Fries
+                                    <span class="ms-auto">
+                                    $5.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Greek Fries
+                                    <span class="ms-auto">
+                                    $7.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Basmati Rice
+                                    <span class="ms-auto">
+                                    $6.00
+                                    </span>
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase ">
+                              Desserts
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Cheesecake
+                                    <span class="ms-auto">
+                                    $8.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Baklava with Ice Cream
+                                    <span class="ms-auto">
+                                    $8.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Kunafe
+                                    <span class="ms-auto">
+                                    $10.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Fruit Platter
+                                    <span class="ms-auto">
+                                    $18.00
+                                    </span>
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Cold Beverages
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Deer Park Water
+                                    <span class="ms-auto">
+                                    $1.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Fiji Water
+                                    <span class="ms-auto">
+                                    $3.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Soda
+                                    <span class="ms-auto">
+                                    $3.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Perrier Mineral Water
+                                    <span class="ms-auto">
+                                    $4.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Red Bull (Sugar free available)
+                                    <span class="ms-auto">
+                                    $5.00
+                                    </span>
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5 ">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Hot Beverages
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Turkish Coffee Pot
+                                    <span class="ms-auto">
+                                    $5.00
+                                    </span>
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold d-flex">
+                                    Hot Tea Pot
+                                    <span class="ms-auto">
+                                    $10.00
+                                    </span>
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Starbuzz
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Blue Mist
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Mighty Freeze
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Queen Of Sex
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Sex On The Beach
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Code 69
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Irish Peach
-                        </h3>
-                      </div>
-                    </div>
+                  <div class="my-5 bottom-content" >
+                     <h5 class="text-light" style="font-family: 'Cardo', serif !important;"> Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness. Our menu items may contain or come into contact with eggs, wheat, peanuts, tree nuts, milk, soy, fish, and shellfish. While we take precautions, cross-contact is possible.</h5>
+                     <h5 class="text-light mt-3" style="font-family: 'Cardo', serif !important; "> If you have allergies or dietary restrictions, please inform our staff before ordering. 
+                     </h5>
                   </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Royalz Houze Mixes
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Sunshine Mix
-                        </h3>
-                        <p>
-                          Lady Killer, Irish Peach, And Mighty Freeze
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Royalz Mix
-                        </h3>
-                        <p>
-                          Vanilla, Gum Mint, Lemon, And Blueberry
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Khaleeji Mix
-                        </h3>
-                        <p>
-                          Lady Killer And Skyfall
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Garden Of Eden
-                        </h3>
-                        <p>
-                          Bluemist, Orange, And Mint
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Court Jester
-                        </h3>
-                        <p>
-                          Bluemist And Love 66
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Arabian Cloud
-                        </h3>
-                        <p>
-                          Queen Of Sex And Lemon Mint
-                        </p>
-                      </div>
-                    </div>
+               </div>
+               <div class="tab-pane fade my-5" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="mt-5">
+                     <h3 class="text-white fw-bold">
+                        Hookah : $25
+                     </h3>
+                     <h3 class="text-white fw-bold">
+                        Refill : $15
+                     </h3>
                   </div>
-                </div>
-              </div>
-              <div class="row mt-5 menu d-block d-md-none">
-                <div class="col-md-6 col-12">
-                  <div class="cat-container">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Afzal (Paan)
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Chief Commissioner
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Paan Raas
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Lychee
-                        </h3>
-                      </div>
-                    </div>
+                  <div class="row mt-5 menu d-none d-md-flex">
+                     <div class="col-md-6 col-12">
+                        <div class="cat-container">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Al faker
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Mint
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Orange
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Blueberry
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Watermelon
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Strawberry
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Peach
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Lemon
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Mango
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Pineapple
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Double Apple
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Grape
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Vanilla
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Banana
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Gum
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Guava
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Kiwi
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Ice Cream
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-12">
+                        <div class="cat-container">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Afzal (Paan)
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Chief Commissioner
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Paan Raas
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Lychee
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Starbuzz
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Blue Mist
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Mighty Freeze
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Queen Of Sex
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Sex On The Beach
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Code 69
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Irish Peach
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Royalz Houze Mixes
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Sunshine Mix
+                                 </h3>
+                                 <p>
+                                    Lady Killer, Irish Peach, And Mighty Freeze
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Royalz Mix
+                                 </h3>
+                                 <p>
+                                    Vanilla, Gum Mint, Lemon, And Blueberry
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Khaleeji Mix
+                                 </h3>
+                                 <p>
+                                    Lady Killer And Skyfall
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Garden Of Eden
+                                 </h3>
+                                 <p>
+                                    Bluemist, Orange, And Mint
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Court Jester
+                                 </h3>
+                                 <p>
+                                    Bluemist And Love 66
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Arabian Cloud
+                                 </h3>
+                                 <p>
+                                    Queen Of Sex And Lemon Mint
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Al faker
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Mint
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Orange
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Blueberry
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Watermelon
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Strawberry
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Peach
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Lemon
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Mango
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Pineapple
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Double Apple
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Grape
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Vanilla
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Banana
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Gum
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Guava
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Kiwi
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Ice Cream
-                        </h3>
-                      </div>
-                      
-                      
-                      
-                    </div>
-                  </div>
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Starbuzz
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Blue Mist
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Mighty Freeze
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Queen Of Sex
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Sex On The Beach
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Code 69
-                        </h3>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Irish Peach
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
+                  <div class="row mt-5 menu d-block d-md-none">
+                     <div class="col-md-6 col-12">
+                        <div class="cat-container">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Afzal (Paan)
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Chief Commissioner
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Paan Raas
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Lychee
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Al faker
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Mint
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Orange
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Blueberry
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Watermelon
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Strawberry
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Peach
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Lemon
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Mango
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Pineapple
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Double Apple
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Grape
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Vanilla
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Banana
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Gum
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Guava
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Kiwi
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Ice Cream
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Starbuzz
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Blue Mist
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Mighty Freeze
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Queen Of Sex
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Sex On The Beach
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Code 69
+                                 </h3>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Irish Peach
+                                 </h3>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cat-container mt-5">
+                           <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Royalz Houze Mixes
+                           </h2>
+                           <div class="inner-cat">
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Sunshine Mix
+                                 </h3>
+                                 <p>
+                                    Lady Killer, Irish Peach, And Mighty Freeze
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Royalz Mix
+                                 </h3>
+                                 <p>
+                                    Vanilla, Gum Mint, Lemon, And Blueberry
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Khaleeji Mix
+                                 </h3>
+                                 <p>
+                                    Lady Killer And Skyfall
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Garden Of Eden
+                                 </h3>
+                                 <p>
+                                    Bluemist, Orange, And Mint
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Court Jester
+                                 </h3>
+                                 <p>
+                                    Bluemist And Love 66
+                                 </p>
+                              </div>
+                              <div class="category py-3">
+                                 <h3 class="text-dark fw-bold">
+                                    Arabian Cloud
+                                 </h3>
+                                 <p>
+                                    Queen Of Sex And Lemon Mint
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
 
-                  <div class="cat-container mt-5">
-                    <h2 class="text-center fw-bold display-2 text-uppercase">
-                      Royalz Houze Mixes
-                    </h2>
-                    <div class="inner-cat">
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Sunshine Mix
-                        </h3>
-                        <p>
-                          Lady Killer, Irish Peach, And Mighty Freeze
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Royalz Mix
-                        </h3>
-                        <p>
-                          Vanilla, Gum Mint, Lemon, And Blueberry
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Khaleeji Mix
-                        </h3>
-                        <p>
-                          Lady Killer And Skyfall
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Garden Of Eden
-                        </h3>
-                        <p>
-                          Bluemist, Orange, And Mint
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Court Jester
-                        </h3>
-                        <p>
-                          Bluemist And Love 66
-                        </p>
-                      </div>
-                      <div class="category py-3">
-                        <h3 class="text-dark fw-bold">
-                          Arabian Cloud
-                        </h3>
-                        <p>
-                          Queen Of Sex And Lemon Mint
-                        </p>
-                      </div>
-                    </div>
-                  </div>
 
-                </div>
-                
-              </div>
+                        
+
+
+                     </div>
+                  </div>
+               </div>
+               <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                  <div class="text-center text-white mt-5">
+                     <div class="row mt-5 menu d-flex d-md-flex text-start">
+                        <div class="col-md-6 col-12">
+                           <div class="cat-container">
+                              <h2 class="text-center fw-bold display-2 text-uppercase">
+                                 Handcrafted Cocktails
+                              </h2>
+                              <div class="inner-cat">
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">
+                                       Royal Lychee Martini
+                                       <span class="ms-auto">$18.00</span>
+                                    </h3>
+                                    <h3 class="text-dark text-start fw-light">
+                                       House Special: Gin, Lychee Liquor, elderflower, topped with lychee
+                                    </h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">
+                                       King’s Old Fashioned
+                                       <span class="ms-auto">$18.00</span>
+                                    </h3>
+                                    <h3 class="text-dark fw-light text-start">
+                                       Woodford Reserve bourbon stirred with elderflower liqueur, bitters, and garnished with an orange peel
+                                    </h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">
+                                       Bombay Heatwave
+                                       <span class="ms-auto">$18.00</span>
+                                    </h3>
+                                    <h3 class="text-dark fw-light text-start">
+                                       Bombay Sapphire, Fever Tree ginger beer, and fresh lime juice, garnished with a lime wheel
+                                    </h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">
+                                       Coconut Grove
+                                       <span class="ms-auto">$14.00</span>
+                                    </h3>
+                                    <h3 class="text-dark fw-light text-start">
+                                       Coconut rum, elderflower liqueur, pineapple juice, and a splash of ginger ale
+                                    </h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">
+                                       Spiced Island Mule
+                                       <span class="ms-auto">$14.00</span>
+                                    </h3>
+                                    <h3 class="text-dark fw-light text-start">
+                                       Spiced rum, ginger beer with fresh lime juice and a touch of triple sec
+                                    </h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">
+                                       Southern Silk
+                                       <span class="ms-auto">$14.00</span>
+                                    </h3>
+                                    <h3 class="text-dark fw-light text-start">
+                                       Jack Daniel's Honey whiskey, peach schnapps, a dash of ginger ale, and fresh orange juice, garnished with an orange wheel
+                                    </h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">
+                                       Queen’s Bloom
+                                       <span class="ms-auto">$14.00</span>
+                                    </h3>
+                                    <h3 class="text-dark fw-light text-start">
+                                       Bombay Sapphire gin, elderflower liqueur, fresh lemon juice, Fever Tree tonic water, garnished with cucumber ribbon
+                                    </h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">
+                                       Espresso Martini
+                                       <span class="ms-auto">$14.00</span>
+                                    </h3>
+                                    <h3 class="text-dark fw-light text-start">
+                                       Vanilla vodka, Fevertree Espresso Martini
+                                    </h3>
+                                 </div>
+                              </div>
+                           </div>
+                          
+                           <div class="cat-container mt-5">
+                            <h2 class="text-center fw-bold display-2 text-uppercase">
+                              Spirits
+                            </h2>
+                            <div class="inner-cat">
+                              <div class="category py-3">
+                                <h3 class="text-dark fw-bold">Whiskey / Bourbon / Rye</h3>
+                                <h3 class="text-dark fw-light">
+                                  Macallan 15, Macallan 12, Jack Daniels, Gentleman’s Jack, Jack Daniels Honey,
+                                  Crown Royal, Whistlepig, Old Forester, Angles of Envy, Woodford Reserve,
+                                  Makers Mark, Basil Hayden, Glenlivet, Oban, Chivas
+                                </h3>
+                              </div>
+                          
+                              <div class="category py-3">
+                                <h3 class="text-dark fw-bold">Vodka</h3>
+                                <h3 class="text-dark fw-light">
+                                  Grey Goose, Svedka, Ciroc
+                                </h3>
+                              </div>
+                          
+                              <div class="category py-3">
+                                <h3 class="text-dark fw-bold">Rum</h3>
+                                <h3 class="text-dark fw-light">
+                                  Bacardi, Bacardi Dragonberry, Bacardi Spiced, Bacardi Coconut
+                                </h3>
+                              </div>
+                          
+                              <div class="category py-3">
+                                <h3 class="text-dark fw-bold">Gin</h3>
+                                <h3 class="text-dark fw-light">
+                                  Bombay Dry, Bombay Sapphire
+                                </h3>
+                              </div>
+                          
+                              <div class="category py-3">
+                                <h3 class="text-dark fw-bold">Tequila</h3>
+                                <h3 class="text-dark fw-light">
+                                  Patron
+                                </h3>
+                              </div>
+                          
+                              <div class="category py-3">
+                                <h3 class="text-dark fw-bold">Specialty</h3>
+                                <h3 class="text-dark fw-light">
+                                  Yeni Raki (Anise-flavored spirit, Turkish), Ouzo (Anise-flavored spirit, Greek),
+                                  Espy House (Assumed local/specialty spirit)
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                           <div class="cat-container">
+                              <h2 class="text-center fw-bold display-2 text-uppercase">
+                                 Beer
+                              </h2>
+                              <div class="inner-cat">
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Stella <span class="ms-auto">$8.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Corona <span class="ms-auto">$8.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Modelo <span class="ms-auto">$8.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Guiness <span class="ms-auto">$8.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Blue Moon <span class="ms-auto">$8.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Dos Equis XX <span class="ms-auto">$8.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Sweetwater 420 <span class="ms-auto">$8.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Taj Mahal <span class="ms-auto">$8.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">White Claw <span class="ms-auto">$5.00</span></h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="cat-container mt-5">
+                              <h2 class="text-center fw-bold display-2 text-uppercase">
+                                 Wine
+                              </h2>
+                              <div class="inner-cat">
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Benvolio, Pinot Grigio <span class="ms-auto">$9.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Carmel Road, Chardonnay <span class="ms-auto">$10.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Carmel Road, Cabernet <span class="ms-auto">$10.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Maison L’Envoye, Pinot Noir <span class="ms-auto">$9.00</span></h3>
+                                 </div>
+                                 <div class="category py-3">
+                                    <h3 class="text-dark fw-bold d-flex">Champagne Bottle <span class="ms-auto">$50.00</span></h3>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="cat-container mt-5">
+                            <h2 class="text-center fw-bold display-2 text-uppercase">
+                               Non-Alcoholic Beverages
+                            </h2>
+                            <div class="inner-cat">
+                               <div class="category py-3">
+                                  <h3 class="text-dark fw-bold d-flex">Fevertree: Ginger Ale & Cucumber Tonic <span class="ms-auto">$4.00</span></h3>
+                               </div>
+                               <div class="category py-3">
+                                  <h3 class="text-dark fw-bold d-flex">Juice: Orange, Pineapple, Lemonade <span class="ms-auto">$5.00</span></h3>
+                               </div>
+                               <div class="category py-3">
+                                  <h3 class="text-dark fw-bold d-flex">Perrier: Small / Large <span class="ms-auto">$4 / $10</span></h3>
+                               </div>
+                               <div class="category py-3">
+                                  <h3 class="text-dark fw-bold d-flex">Soda: Coke, Coke Zero, Sprite <span class="ms-auto">$9.00</span></h3>
+                               </div>
+                            </div>
+                         </div>
+                          
+
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-              <div class="text-center text-white mt-5">
-                <h1 class="display-4">Comming Soon...</h1>
-              </div>
-            </div>
-          </div>
-        </div>
+         </div>
       </section>
-
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous">
-      </script>
+         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+         crossorigin="anonymous"></script>
       <script>
-        setTimeout(function() {
-          console.log("Script Loaded - Checking URL Hash");
-
-          let hash = window.location.hash.substring(1); // Get the hash without #
-          console.log("URL hash obtained on load:", hash);
-
-          // Mapping hash values to tab button IDs
-          let tabMap = {
-            "eat": "home-tab",
-            "smoke": "profile-tab",
-            "drink": "contact-tab"
-          };
-
-          // Check if the hash matches any tab
-          if (hash && tabMap[hash]) {
-            let tab = document.getElementById(tabMap[hash]);
-            if (tab) {
-              console.log("Activating tab:", tab.id);
-              new bootstrap.Tab(tab).show();
-            } else {
-              console.log("Tab not found for hash:", hash);
-            }
-          } else {
-            console.log("No valid hash found in URL");
-          }
-
-          // Update the URL hash when a tab is clicked
-          document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab = >{
-            tab.addEventListener("click",
-            function() {
-              let newHash = Object.keys(tabMap).find(key = >tabMap[key] === this.id);
-              if (newHash) {
-                history.pushState(null, null, "#" + newHash);
-                console.log("Tab changed, new URL hash:", newHash);
-              }
-            });
-          });
-
-        },
-        100); // Delayed execution by 1 second
-        
+         setTimeout(function() {
+           console.log("Script Loaded - Checking URL Hash");
+         
+           let hash = window.location.hash.substring(1); // Get the hash without #
+           console.log("URL hash obtained on load:", hash);
+         
+           // Mapping hash values to tab button IDs
+           let tabMap = {
+             "eat": "home-tab",
+             "smoke": "profile-tab",
+             "drink": "contact-tab"
+           };
+         
+           // Check if the hash matches any tab
+           if (hash && tabMap[hash]) {
+             let tab = document.getElementById(tabMap[hash]);
+             if (tab) {
+               console.log("Activating tab:", tab.id);
+               new bootstrap.Tab(tab).show();
+             } else {
+               console.log("Tab not found for hash:", hash);
+             }
+           } else {
+             console.log("No valid hash found in URL");
+           }
+         
+           // Update the URL hash when a tab is clicked
+           document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab = >{
+             tab.addEventListener("click",
+             function() {
+               let newHash = Object.keys(tabMap).find(key = >tabMap[key] === this.id);
+               if (newHash) {
+                 history.pushState(null, null, "#" + newHash);
+                 console.log("Tab changed, new URL hash:", newHash);
+               }
+             });
+           });
+         
+         },
+         100); // Delayed execution by 1 second
+         
       </script>
-  </body>
-
+   </body>
 </html>
